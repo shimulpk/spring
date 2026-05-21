@@ -33,4 +33,28 @@ public class DepartmentController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<Department> getById(@PathVariable Long id){
+        Department department=departmentService.getByID(id).orElseThrow(() -> new RuntimeException("Department not found"));
+
+        return ResponseEntity.ok(department);
+
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> delete(@PathVariable Long id){
+        departmentService.delete(id);
+        return ResponseEntity.ok("Department Delete Successfully");
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Department> update(@PathVariable Long id,
+                                             @RequestBody Department department){
+
+        department.setId(id);
+        Department updateDepartment=departmentService.saveOrUpdate(department);
+
+        return ResponseEntity.ok(updateDepartment);
+    }
+
 }

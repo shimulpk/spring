@@ -16,6 +16,7 @@ public class PoliceStationController {
     @Autowired
     private PoliceStationService policeStationService;
 
+    @PostMapping
     public ResponseEntity<PoliceStation> save(@RequestBody PoliceStation pk) {
 
         PoliceStation savedPoliceStation = policeStationService.saveOrUpdate(pk);
@@ -28,5 +29,35 @@ public class PoliceStationController {
         List<PoliceStation> list = policeStationService.getAll();
         return ResponseEntity.ok(list);
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<PoliceStation> getById(@PathVariable Long id ){
+        PoliceStation policeStation=policeStationService.getById(id).
+                orElseThrow(() -> new RuntimeException("Police station not found"));
+
+        return ResponseEntity.ok(policeStation);
+
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteById(@PathVariable Long id){
+
+    policeStationService.delete(id);
+    return ResponseEntity.ok("police station deleted successfully");
+    }
+
+    @PutMapping("/{id}")
+
+    public ResponseEntity<PoliceStation> update(@PathVariable
+       Long id, @RequestBody PoliceStation policeStation){
+
+        policeStation.setId(id);
+
+        PoliceStation updatePoliceStation=policeStationService.saveOrUpdate(policeStation);
+        return ResponseEntity.ok(updatePoliceStation);
+
+    }
+
+
 }
 

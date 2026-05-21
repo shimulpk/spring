@@ -24,11 +24,11 @@ public class DepartmentService {
     }
 
 
-    public Optional<Department> getByID(Integer id){
+    public Optional<Department> getByID(Long id){
         return departmentRepository.findById(id);
     }
 
-    public void delete(Integer id){
+    public void delete(Long id){
         departmentRepository.deleteById(id);
     }
 
