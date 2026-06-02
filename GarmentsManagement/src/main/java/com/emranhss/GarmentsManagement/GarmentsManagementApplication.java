@@ -10,4 +10,5 @@ public class GarmentsManagementApplication {
 		SpringApplication.run(GarmentsManagementApplication.class, args);
 	}
 
+
 }
