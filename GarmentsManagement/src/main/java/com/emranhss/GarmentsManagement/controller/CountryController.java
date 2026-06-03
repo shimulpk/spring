@@ -26,6 +26,8 @@ public class CountryController {
         return new ResponseEntity<>(savedCountry, HttpStatus.CREATED);
     }
 
+
+
     @GetMapping
     public ResponseEntity<List<Country>> getAll(){
         List<Country> list=countryService.findAll();
