@@ -1,9 +1,6 @@
 package com.emranhss.GarmentsManagement.serviceimp;
 
-import com.emranhss.GarmentsManagement.entity.Customer;
-import com.emranhss.GarmentsManagement.repository.CustomerRepository;
-import com.emranhss.GarmentsManagement.repository.UserRepository;
-import com.emranhss.GarmentsManagement.service.CustomerService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
