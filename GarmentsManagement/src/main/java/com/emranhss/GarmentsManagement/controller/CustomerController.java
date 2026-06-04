@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import tools.jackson.databind.ObjectMapper;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -42,6 +43,13 @@ public class CustomerController {
             return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
+
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Customer>> getALl(){
+        List<Customer> list = customerService.findAll();
+        return  ResponseEntity.ok(list);
 
     }
 }
