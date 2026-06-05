@@ -1,5 +1,6 @@
 package com.emranhss.GarmentsManagement.controller;
 
+import com.emranhss.GarmentsManagement.dto.DivisionDto;
 import com.emranhss.GarmentsManagement.entity.Division;
 import com.emranhss.GarmentsManagement.service.DivisionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +31,14 @@ public class DivisionController {
 
     //find by country id
     @GetMapping("country/{id}")
-    public List<Division> getCountryId(@PathVariable Integer id){
+    public List<DivisionDto> getCountryId(@PathVariable Integer id){
         return  divisionService.getDivisionsByCountryId(id);
     }
 
 
     //find by country Name
     @GetMapping("country/name/{name}")
-    public List<Division> getCountryName(@PathVariable String name){
+    public List<DivisionDto> getCountryName(@PathVariable String name){
 
         return divisionService.getDivisionsByCountryName(name);
     }

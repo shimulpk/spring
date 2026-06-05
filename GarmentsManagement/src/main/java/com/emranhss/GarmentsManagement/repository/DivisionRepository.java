@@ -1,5 +1,6 @@
 package com.emranhss.GarmentsManagement.repository;
 
+import com.emranhss.GarmentsManagement.dto.DivisionDto;
 import com.emranhss.GarmentsManagement.entity.Division;
 import org.springframework.data.jpa.repository.JpaRepository;
 

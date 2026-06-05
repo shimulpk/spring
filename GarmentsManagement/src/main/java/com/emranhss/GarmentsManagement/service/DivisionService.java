@@ -1,6 +1,7 @@
 package com.emranhss.GarmentsManagement.service;
 
 
+import com.emranhss.GarmentsManagement.dto.DivisionDto;
 import com.emranhss.GarmentsManagement.entity.Division;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +15,8 @@ public interface DivisionService {
     Optional<Division> getById(Integer id);
     void delete(Integer id);
 
-    List<Division> getDivisionsByCountryId(Integer countryId);
+    List<DivisionDto> getDivisionsByCountryId(Integer countryId);
 
-    List<Division> getDivisionsByCountryName(String countryName);
+    List<DivisionDto> getDivisionsByCountryName(String countryName);
 
 }
