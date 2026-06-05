@@ -32,7 +32,7 @@ public class CustomerServiceImp implements CustomerService {
     @Autowired
     private EmailService emailService;
 
-    @Value("D:/Practise spring/spring/")
+    @Value("${image.upload.dir}")
     private String uploadDir;
 
 
