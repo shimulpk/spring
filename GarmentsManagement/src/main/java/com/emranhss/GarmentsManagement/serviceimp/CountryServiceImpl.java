@@ -26,12 +26,12 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public Optional<Country> getById(Integer id) {
+    public Optional<Country> getById(Long id) {
         return countryRepository.findById(id);
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
     countryRepository.deleteById(id);
     }
 }

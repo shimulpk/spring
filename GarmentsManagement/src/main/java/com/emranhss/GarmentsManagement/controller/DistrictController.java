@@ -35,7 +35,7 @@ public class DistrictController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<List<DistrictResponseDto>> getByDivisionId(@PathVariable Integer id){
+    public ResponseEntity<List<DistrictResponseDto>> getByDivisionId(@PathVariable Long id){
         List<DistrictResponseDto> list=districtService.findByDivisionId(id);
         return ResponseEntity.ok(list);
 

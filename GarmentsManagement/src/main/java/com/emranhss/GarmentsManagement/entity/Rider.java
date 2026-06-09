@@ -1,10 +1,13 @@
 package com.emranhss.GarmentsManagement.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "riders")
@@ -16,15 +19,7 @@ public class Rider {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    @Column(unique = true)
-    private String email;
 
-    @Column(unique = true)
-    private String phone;
-
-    @Size(max = 20, min = 4)
-    private String password;
 
     private String vehicleType;
 
@@ -32,7 +27,23 @@ public class Rider {
 
     private String nidNumber;
 
-    private String zone;
+    //Zone Management-------------
+
+    // Rider Recover Multiple Thanas; One Thana Have Multiple Riders.
+
+    //Creates A Riders Zone Join table Automitaccaly.
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "rider_zones",
+            joinColumns = @JoinColumn(name = "rider_id"),
+            InversJoinColumns=@JoinColumn(name = "police_station_id")
+    )
+
+    private Set<PoliceStation> zones=new HashSet<>();
+
+
+
 
     private Double rating = 0.0;
 

@@ -25,7 +25,7 @@ public class DivisionServiceImp implements DivisionService {
 
     @Override
     public Division save(Division d) {
-        Integer countryId= d.getCountry().getId();
+        Long countryId= d.getCountry().getId();
         Country c = countryRepository.findById(countryId)
                 .orElseThrow(()-> new RuntimeException("Country Not Found with this id"));
 
@@ -40,17 +40,17 @@ public class DivisionServiceImp implements DivisionService {
     }
 
     @Override
-    public Optional<Division> getById(Integer id) {
+    public Optional<Division> getById(Long id) {
         return divisionRepository.findById(id);
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
     divisionRepository.deleteById(id);
     }
 
     @Override
-    public List<DivisionDto> getDivisionsByCountryId(Integer countryId) {
+    public List<DivisionDto> getDivisionsByCountryId(Long countryId) {
         List<Division> list = divisionRepository.findByCountryId(countryId);
         return list.stream().map(this::convertToDto).collect(Collectors.toList());
     }

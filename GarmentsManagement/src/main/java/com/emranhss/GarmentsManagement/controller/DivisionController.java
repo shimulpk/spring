@@ -31,7 +31,7 @@ public class DivisionController {
 
     //find by country id
     @GetMapping("country/{id}")
-    public List<DivisionDto> getCountryId(@PathVariable Integer id){
+    public List<DivisionDto> getCountryId(@PathVariable Long id){
         return  divisionService.getDivisionsByCountryId(id);
     }
 

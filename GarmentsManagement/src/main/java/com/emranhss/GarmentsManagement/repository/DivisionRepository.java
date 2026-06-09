@@ -7,10 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 
-public interface DivisionRepository extends JpaRepository<Division,Integer> {
+public interface DivisionRepository extends JpaRepository<Division,Long> {
 
 // Find All division by countryId
-    List<Division> findByCountryId(Integer countryID);
+    List<Division> findByCountryId(Long countryID);
 
 
     // Find All division by country Name

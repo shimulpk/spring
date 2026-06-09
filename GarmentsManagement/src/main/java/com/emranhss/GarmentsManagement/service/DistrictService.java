@@ -14,10 +14,10 @@ import java.util.Optional;
 public interface DistrictService {
     District save(District d);
     List<District> findAll();
-    Optional<District> getById(Integer id);
-    void delete(Integer id);
+    Optional<District> getById(Long id);
+    void delete(Long id);
 
-    List<DistrictResponseDto> findByDivisionId(Integer divisionId);
+    List<DistrictResponseDto> findByDivisionId(Long divisionId);
 
     List<DistrictResponseDto> findByDivisionName(String divisionName);
 }

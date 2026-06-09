@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @Data
 public class DivisionDto {
 
-    private Integer divisionId;
+    private Long divisionId;
 
     private String divisionName;
 
     private String countryName;
-    private Integer CountryId;
+    private Long CountryId;
 
 }

@@ -11,15 +11,15 @@ import lombok.NoArgsConstructor;
 @Data
 public class DistrictResponseDto {
 
-    private Integer districtId;
+    private Long districtId;
     private String districtName;
 
-    private Integer divisionId;
+    private Long divisionId;
 
     private String divisionName;
 
     private String countryName;
     private String countryCode;
-    private Integer CountryId;
+    private Long CountryId;
 
 }
