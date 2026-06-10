@@ -37,9 +37,8 @@ public class Rider {
     @JoinTable(
             name = "rider_zones",
             joinColumns = @JoinColumn(name = "rider_id"),
-            InversJoinColumns=@JoinColumn(name = "police_station_id")
+            inverseJoinColumns = @JoinColumn(name = "police_station_id")
     )
-
     private Set<PoliceStation> zones=new HashSet<>();
 
 
