@@ -16,34 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `order_items`
+-- Table structure for table `day_wise_cutting_production`
 --
 
-DROP TABLE IF EXISTS `order_items`;
+DROP TABLE IF EXISTS `day_wise_cutting_production`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `order_items` (
+CREATE TABLE `day_wise_cutting_production` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `color` varchar(255) DEFAULT NULL,
-  `quantity` int DEFAULT NULL,
-  `size` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `unit_price` decimal(38,2) DEFAULT NULL,
-  `order_id` bigint NOT NULL,
+  `actual_cut_pieces` int DEFAULT NULL,
+  `cutting_master` varchar(255) DEFAULT NULL,
+  `date` date NOT NULL,
+  `reject_pieces` int DEFAULT NULL,
+  `style_no` varchar(255) DEFAULT NULL,
+  `cutting_plan_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKbioxgbv59vetrxe0ejfubep1w` (`order_id`),
-  CONSTRAINT `FKbioxgbv59vetrxe0ejfubep1w` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FKrtbunx97h4ck7i0wcnglj3e7s` (`cutting_plan_id`),
+  CONSTRAINT `FKrtbunx97h4ck7i0wcnglj3e7s` FOREIGN KEY (`cutting_plan_id`) REFERENCES `cutting_plans` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `order_items`
+-- Dumping data for table `day_wise_cutting_production`
 --
 
-LOCK TABLES `order_items` WRITE;
-/*!40000 ALTER TABLE `order_items` DISABLE KEYS */;
-INSERT INTO `order_items` VALUES (17,'Navy',800,'S','Full Sleeve Shirt',6.50,3),(18,'Navy',1000,'M','Full Sleeve Shirt',6.50,3),(19,'Navy',500,'L','Full Sleeve Shirt',6.50,3),(20,'Navy',500,'XL','Full Sleeve Shirt',6.90,3),(25,'Navy',500,'S','Short Sleeve Shirt',6.50,1),(26,'Navy',800,'M','Short Sleeve Shirt',6.50,1),(27,'Navy',500,'L','Short Sleeve Shirt',6.50,1),(28,'Navy',500,'XL','Short Sleeve Shirt',6.90,1),(29,'Navy',500,'S','Short Sleeve Shirt',6.50,2),(30,'Navy',800,'M','Short Sleeve Shirt',6.50,2),(31,'Navy',700,'L','Short Sleeve Shirt',6.50,2),(32,'Navy',300,'XL','Short Sleeve Shirt',6.90,2);
-/*!40000 ALTER TABLE `order_items` ENABLE KEYS */;
+LOCK TABLES `day_wise_cutting_production` WRITE;
+/*!40000 ALTER TABLE `day_wise_cutting_production` DISABLE KEYS */;
+INSERT INTO `day_wise_cutting_production` VALUES (1,1000,'Rahim','2026-06-24',20,'NC205',1),(2,1800,'Rahim','2026-06-24',20,'NC205',1);
+/*!40000 ALTER TABLE `day_wise_cutting_production` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-25 14:16:33
+-- Dump completed on 2026-06-25 14:16:32
