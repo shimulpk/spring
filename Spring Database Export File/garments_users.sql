@@ -31,6 +31,7 @@ CREATE TABLE `users` (
   `phone` varchar(255) DEFAULT NULL,
   `role` enum('ADMIN','MERCHANDISER','PRODUCTION_MANAGER','STORE_MANAGER') DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`),
   UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`)
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-25 14:16:33
+-- Dump completed on 2026-07-05 12:47:57

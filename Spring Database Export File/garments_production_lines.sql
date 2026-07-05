@@ -28,7 +28,7 @@ CREATE TABLE `production_lines` (
   `line_id` varchar(255) DEFAULT NULL,
   `supervisor` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `production_lines` (
 
 LOCK TABLES `production_lines` WRITE;
 /*!40000 ALTER TABLE `production_lines` DISABLE KEYS */;
-INSERT INTO `production_lines` VALUES (1,1000,'L-1','Mizanur Rahman'),(2,1200,'L-2','Shaharan Hossain');
+INSERT INTO `production_lines` VALUES (1,1000,'L-1','Mizanur Rahman'),(2,1200,'L-2','Shaharan Hossain'),(3,500,'L-3','Shaharan Hossain');
 /*!40000 ALTER TABLE `production_lines` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-25 14:16:31
+-- Dump completed on 2026-07-05 12:47:58

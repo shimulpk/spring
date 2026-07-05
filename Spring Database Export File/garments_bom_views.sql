@@ -35,7 +35,7 @@ CREATE TABLE `bom_views` (
   PRIMARY KEY (`id`),
   KEY `FKgujq80ku3uvlqtrwgr8pwcdb8` (`style_id`),
   CONSTRAINT `FKgujq80ku3uvlqtrwgr8pwcdb8` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `bom_views` (
 
 LOCK TABLES `bom_views` WRITE;
 /*!40000 ALTER TABLE `bom_views` DISABLE KEYS */;
-INSERT INTO `bom_views` VALUES (1,'Body','Cotton Fabric',1.75,1,6.13,'Yard',3.50,1),(2,'Body','Care-Label',2000.00,2,2700.00,'Yard',1.35,1);
+INSERT INTO `bom_views` VALUES (1,'Body','Cotton Fabric',1.88,1,225.60,'Yard',120.00,1),(2,'Body','Care-Label',2.00,2,10.00,'Pieces',5.00,1),(3,'10','Hang Tag',2.00,3,14.00,'Piece',7.00,1),(4,'','Button',8.00,4,10.80,'Pieces',1.35,1),(5,'','Interlining',0.25,5,8.75,'meter',35.00,1);
 /*!40000 ALTER TABLE `bom_views` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-25 14:16:33
+-- Dump completed on 2026-07-05 12:48:00

@@ -42,7 +42,7 @@ CREATE TABLE `bom_styles` (
 
 LOCK TABLES `bom_styles` WRITE;
 /*!40000 ALTER TABLE `bom_styles` DISABLE KEYS */;
-INSERT INTO `bom_styles` VALUES (1,_binary '','Approved','Men\'s casual short sleeve shirt','S,M,L,XL','NK201','Short Sleeve Shirt','Casual'),(2,_binary '','Draft','Premium formal full sleeve shirt','M,L,XL,XXL','IZ203','Full Sleeve Shirt','Formal'),(3,_binary '','Approved','Men\'s casual short sleeve shirt','S,M,L,XL','VD204','Mens Spring 2026','Casual'),(4,_binary '','Approved','Men\'s casual short sleeve shirt','S,M,L,XL','NC205','Mens Winter 2026','Casual');
+INSERT INTO `bom_styles` VALUES (1,_binary '','Approved','Men\'s casual short sleeve shirt','S,M,L,XL','NK201','Short Sleeve Shirt','Casual'),(2,_binary '','Draft','Premium formal full sleeve shirt','M,L,XL,XXL','IZ203','Full Sleeve Shirt','Formal'),(3,_binary '','Approved','Men\'s casual Summer 2026','S,M,L,XL','VD204','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(4,_binary '','Approved','Men\'s casual Winter 2026','S,M,L,XL','NC205','Short Sleeve Shirt And Full Sleeve Shirt',' Casual');
 /*!40000 ALTER TABLE `bom_styles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-25 14:16:32
+-- Dump completed on 2026-07-05 12:48:00
