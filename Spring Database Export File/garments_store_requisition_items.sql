@@ -16,35 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `store_requisition_items`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `store_requisition_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `store_requisition_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
-  `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `quantity` double DEFAULT NULL,
+  `item_id` bigint DEFAULT NULL,
+  `store_requisition_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FK9q0nlvx3ualaki28xai84jvpd` (`item_id`),
+  KEY `FK6wjadjscgdp7rg67uhu3k7t2e` (`store_requisition_id`),
+  CONSTRAINT `FK6wjadjscgdp7rg67uhu3k7t2e` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
+  CONSTRAINT `FK9q0nlvx3ualaki28xai84jvpd` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `store_requisition_items`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `store_requisition_items` WRITE;
+/*!40000 ALTER TABLE `store_requisition_items` DISABLE KEYS */;
+INSERT INTO `store_requisition_items` VALUES (1,10,1,1),(2,2000,2,1),(3,3000,4,1),(4,100,6,1),(5,100,1,2),(6,2000,4,2),(7,2000,7,2),(8,2000,2,3),(9,4000,7,3);
+/*!40000 ALTER TABLE `store_requisition_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-09 19:21:14

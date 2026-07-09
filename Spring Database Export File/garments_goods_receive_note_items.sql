@@ -16,35 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `goods_receive_note_items`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `goods_receive_note_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `goods_receive_note_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
-  `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `line_total` double NOT NULL,
+  `quantity` double NOT NULL,
+  `unit_price` double NOT NULL,
+  `goods_receive_note_id` bigint NOT NULL,
+  `purchase_order_item_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FK7j9e9mrh191nca9lnqewwmt2g` (`goods_receive_note_id`),
+  KEY `FKp40rl7g9kx47bh4vsvrblxhsd` (`purchase_order_item_id`),
+  CONSTRAINT `FK7j9e9mrh191nca9lnqewwmt2g` FOREIGN KEY (`goods_receive_note_id`) REFERENCES `goods_receive_notes` (`id`),
+  CONSTRAINT `FKp40rl7g9kx47bh4vsvrblxhsd` FOREIGN KEY (`purchase_order_item_id`) REFERENCES `purchase_order_items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `goods_receive_note_items`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `goods_receive_note_items` WRITE;
+/*!40000 ALTER TABLE `goods_receive_note_items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `goods_receive_note_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

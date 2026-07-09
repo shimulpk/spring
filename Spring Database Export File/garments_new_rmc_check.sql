@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,18 +27,16 @@ CREATE TABLE `new_rmc_check` (
   `buyer_name` varchar(255) DEFAULT NULL,
   `created_at` datetime(6) DEFAULT NULL,
   `grand_total_cost` double DEFAULT NULL,
-  `item_name` varchar(255) DEFAULT NULL,
-  `style_id` bigint NOT NULL,
-  `style_no` varchar(255) NOT NULL,
-  `total_order_qty` int NOT NULL,
-  `order_id` bigint NOT NULL,
   `style_name` varchar(255) DEFAULT NULL,
+  `total_order_qty` int DEFAULT NULL,
+  `order_id` bigint NOT NULL,
+  `style_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FKd3e1p28yy51sks9hs6tdp2qvq` (`order_id`),
   KEY `FK2lbt1qowpsw7yrkdhaj385irh` (`style_id`),
   CONSTRAINT `FK2lbt1qowpsw7yrkdhaj385irh` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`),
   CONSTRAINT `FKd3e1p28yy51sks9hs6tdp2qvq` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +45,7 @@ CREATE TABLE `new_rmc_check` (
 
 LOCK TABLES `new_rmc_check` WRITE;
 /*!40000 ALTER TABLE `new_rmc_check` DISABLE KEYS */;
-INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-06 00:58:05.619917',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',5,'TO-207',14500,4,NULL),(2,'Tiyani Outdoor Bd','2026-07-06 00:58:05.686477',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',5,'TO-207',14500,4,NULL);
+INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 18:29:02.311268',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5);
 /*!40000 ALTER TABLE `new_rmc_check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-06 12:42:19
+-- Dump completed on 2026-07-09 19:21:16

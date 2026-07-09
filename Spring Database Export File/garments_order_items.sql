@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,7 +33,7 @@ CREATE TABLE `order_items` (
   PRIMARY KEY (`id`),
   KEY `FKbioxgbv59vetrxe0ejfubep1w` (`order_id`),
   CONSTRAINT `FKbioxgbv59vetrxe0ejfubep1w` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,6 @@ CREATE TABLE `order_items` (
 
 LOCK TABLES `order_items` WRITE;
 /*!40000 ALTER TABLE `order_items` DISABLE KEYS */;
-INSERT INTO `order_items` VALUES (17,'Navy',800,'S','Full Sleeve Shirt',6.50,3),(18,'Navy',1000,'M','Full Sleeve Shirt',6.50,3),(19,'Navy',500,'L','Full Sleeve Shirt',6.50,3),(20,'Navy',500,'XL','Full Sleeve Shirt',6.90,3),(25,'Navy',500,'S','Short Sleeve Shirt',6.50,1),(26,'Navy',800,'M','Short Sleeve Shirt',6.50,1),(27,'Navy',500,'L','Short Sleeve Shirt',6.50,1),(28,'Navy',500,'XL','Short Sleeve Shirt',6.90,1),(29,'Navy',500,'S','Short Sleeve Shirt',6.50,2),(30,'Navy',800,'M','Short Sleeve Shirt',6.50,2),(31,'Navy',700,'L','Short Sleeve Shirt',6.50,2),(32,'Navy',300,'XL','Short Sleeve Shirt',6.90,2),(33,'',3000,'S','Short Sleeve Shirt',520.00,4),(34,'',3000,'M','Short Sleeve Shirt',520.00,4),(35,'',2000,'L','Short Sleeve Shirt',520.00,4),(36,'',2000,'XL','Short Sleeve Shirt',520.00,4),(37,'',500,'S','Full Sleeve Shirt',550.00,4),(38,'',500,'M','Full Sleeve Shirt',550.00,4),(39,'',1500,'L','Full Sleeve Shirt',550.00,4),(40,'',2000,'XL','Full Sleeve Shirt',550.00,4);
 /*!40000 ALTER TABLE `order_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-06 12:42:20
+-- Dump completed on 2026-07-09 19:21:12

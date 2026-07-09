@@ -16,35 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `raw_material_checks`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `raw_material_checks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `raw_material_checks` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
-  `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `created_at` datetime(6) DEFAULT NULL,
+  `order_code` varchar(255) DEFAULT NULL,
+  `po_number` varchar(255) DEFAULT NULL,
+  `total_fabric_required` decimal(38,2) DEFAULT NULL,
+  `order_id` bigint DEFAULT NULL,
+  `style_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FK5mj2byjw32vj5hgefr6qohy8d` (`order_id`),
+  KEY `FKebsdru4kwo36qpo9coquu5yg3` (`style_id`),
+  CONSTRAINT `FK5mj2byjw32vj5hgefr6qohy8d` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `FKebsdru4kwo36qpo9coquu5yg3` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `raw_material_checks`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `raw_material_checks` WRITE;
+/*!40000 ALTER TABLE `raw_material_checks` DISABLE KEYS */;
+INSERT INTO `raw_material_checks` VALUES (4,'2026-06-18 21:13:44.716477','OR-2026-001','HM-PO-7788',4312.00,1,1),(5,'2026-06-18 21:15:34.217429','OR-2026-002','HM-PO-7740',4290.00,2,3),(6,'2026-06-18 21:15:45.507023','OR-2026-004','NC-PO-8850',5627.00,3,4);
+/*!40000 ALTER TABLE `raw_material_checks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-09 19:21:12

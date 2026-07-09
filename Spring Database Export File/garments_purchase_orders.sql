@@ -16,35 +16,38 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `purchase_orders`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `purchase_orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `purchase_orders` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
-  `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `grand_total` double NOT NULL,
+  `po_date` date DEFAULT NULL,
+  `po_no` varchar(255) NOT NULL,
+  `remarks` varchar(1000) DEFAULT NULL,
+  `status` enum('APPROVED','CANCELLED','DRAFT','RECEIVED','SENT','PENDING') DEFAULT NULL,
+  `store_requisition_id` bigint DEFAULT NULL,
+  `vendor_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `UKhocigcx4568i6hq7xymoco77w` (`po_no`),
+  KEY `FKcg1mq22nertgui6gv32rq9x4` (`store_requisition_id`),
+  KEY `FKn3rssy7613r6x49ax30e2nbay` (`vendor_id`),
+  CONSTRAINT `FKcg1mq22nertgui6gv32rq9x4` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
+  CONSTRAINT `FKn3rssy7613r6x49ax30e2nbay` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `purchase_orders`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `purchase_orders` WRITE;
+/*!40000 ALTER TABLE `purchase_orders` DISABLE KEYS */;
+INSERT INTO `purchase_orders` VALUES (1,28900,'2026-07-09','PO-0001','','PENDING',1,1),(2,29000,'2026-07-10','PO-0002',NULL,'PENDING',2,2),(3,248600,'2026-07-09','PO-0003','','PENDING',3,3);
+/*!40000 ALTER TABLE `purchase_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-09 19:21:14

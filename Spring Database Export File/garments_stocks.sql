@@ -16,35 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `stocks`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `stocks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `stocks` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
-  `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `available_quantity` double NOT NULL,
+  `item_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `UK4lh9to64yri1ube89ufnjrvbx` (`item_id`),
+  CONSTRAINT `FKko9qvmybxt0opqoibsqrmivh8` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `stocks`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `stocks` WRITE;
+/*!40000 ALTER TABLE `stocks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `stocks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-09 19:21:16

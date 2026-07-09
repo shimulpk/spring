@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,17 +24,17 @@ DROP TABLE IF EXISTS `new_rmc_details`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `new_rmc_details` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `material_name` varchar(255) NOT NULL,
-  `qty_per_piece` double NOT NULL,
+  `material_name` varchar(255) DEFAULT NULL,
+  `qty_per_piece` double DEFAULT NULL,
   `total_material_cost` double DEFAULT NULL,
   `total_qty_required` double DEFAULT NULL,
-  `unit` varchar(255) NOT NULL,
-  `unit_price` double NOT NULL,
+  `unit` varchar(255) DEFAULT NULL,
+  `unit_price` double DEFAULT NULL,
   `rmc_check_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK6g1etkcsl8xls0ncee5ub5hfx` (`rmc_check_id`),
   CONSTRAINT `FK6g1etkcsl8xls0ncee5ub5hfx` FOREIGN KEY (`rmc_check_id`) REFERENCES `new_rmc_check` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `new_rmc_details` (
 
 LOCK TABLES `new_rmc_details` WRITE;
 /*!40000 ALTER TABLE `new_rmc_details` DISABLE KEYS */;
-INSERT INTO `new_rmc_details` VALUES (1,'Cotton Fabric',1.88,3543800,27260,'Yard',130,1),(2,'Hang Tag',3,217500,43500,'Pieces',5,1),(3,'Care Label',2,232000,29000,'Pieces',8,1),(4,'Button',12,348000,174000,'Pieces',2,1),(5,'Interlining',0.45,228375,6525,'meter',35,1),(6,'Cotton Fabric',1.88,3543800,27260,'Yard',130,2),(7,'Hang Tag',3,217500,43500,'Pieces',5,2),(8,'Care Label',2,232000,29000,'Pieces',8,2),(9,'Button',12,348000,174000,'Pieces',2,2),(10,'Interlining',0.45,228375,6525,'meter',35,2);
+INSERT INTO `new_rmc_details` VALUES (1,'Cotton Fabric',1.88,3543800,27260,'Yard',130,1),(2,'Hang Tag',3,217500,43500,'Pieces',5,1),(3,'Care Label',2,232000,29000,'Pieces',8,1),(4,'Button',12,348000,174000,'Pieces',2,1),(5,'Interlining',0.45,228375,6525,'meter',35,1);
 /*!40000 ALTER TABLE `new_rmc_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-06 12:42:19
+-- Dump completed on 2026-07-09 19:21:14

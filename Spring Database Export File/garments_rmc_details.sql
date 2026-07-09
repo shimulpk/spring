@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `fabrics_details`
+-- Table structure for table `rmc_details`
 --
 
-DROP TABLE IF EXISTS `fabrics_details`;
+DROP TABLE IF EXISTS `rmc_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `fabrics_details` (
+CREATE TABLE `rmc_details` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `base_fabric` decimal(38,2) DEFAULT NULL,
   `calculated_fabric` decimal(38,2) DEFAULT NULL,
@@ -33,19 +33,19 @@ CREATE TABLE `fabrics_details` (
   `type` varchar(255) DEFAULT NULL,
   `rmc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FKal9b3pw0h6aeug1hrtdbv5kp4` (`rmc_id`),
-  CONSTRAINT `FKal9b3pw0h6aeug1hrtdbv5kp4` FOREIGN KEY (`rmc_id`) REFERENCES `fabric-check` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FK4jv3uxwlrfygido9xdyeomafe` (`rmc_id`),
+  CONSTRAINT `FK4jv3uxwlrfygido9xdyeomafe` FOREIGN KEY (`rmc_id`) REFERENCES `raw_material_checks` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `fabrics_details`
+-- Dumping data for table `rmc_details`
 --
 
-LOCK TABLES `fabrics_details` WRITE;
-/*!40000 ALTER TABLE `fabrics_details` DISABLE KEYS */;
-INSERT INTO `fabrics_details` VALUES (1,1.79,5370.00,_binary '','Short Sleeve Shirt',3000,'S','Short Sleeve Shirt',1),(2,1.84,5520.00,_binary '','Short Sleeve Shirt',3000,'M','Short Sleeve Shirt',1),(3,1.89,3780.00,_binary '','Short Sleeve Shirt',2000,'L','Short Sleeve Shirt',1),(4,2.00,4000.00,_binary '','Short Sleeve Shirt',2000,'XL','Short Sleeve Shirt',1),(5,1.94,970.00,_binary '','Full Sleeve Shirt',500,'S','Full Sleeve Shirt',1),(6,2.00,1000.00,_binary '','Full Sleeve Shirt',500,'M','Full Sleeve Shirt',1),(7,2.05,3075.00,_binary '','Full Sleeve Shirt',1500,'L','Full Sleeve Shirt',1),(8,2.12,4240.00,_binary '','Full Sleeve Shirt',2000,'XL','Full Sleeve Shirt',1);
-/*!40000 ALTER TABLE `fabrics_details` ENABLE KEYS */;
+LOCK TABLES `rmc_details` WRITE;
+/*!40000 ALTER TABLE `rmc_details` DISABLE KEYS */;
+INSERT INTO `rmc_details` VALUES (13,1.79,895.00,_binary '','Short Sleeve Shirt',500,'S','Short Sleeve Shirt',4),(14,1.84,1472.00,_binary '','Short Sleeve Shirt',800,'M','Short Sleeve Shirt',4),(15,1.89,945.00,_binary '','Short Sleeve Shirt',500,'L','Short Sleeve Shirt',4),(16,2.00,1000.00,_binary '','Short Sleeve Shirt',500,'XL','Short Sleeve Shirt',4),(17,1.79,895.00,_binary '','Short Sleeve Shirt',500,'S','Short Sleeve Shirt',5),(18,1.84,1472.00,_binary '','Short Sleeve Shirt',800,'M','Short Sleeve Shirt',5),(19,1.89,1323.00,_binary '','Short Sleeve Shirt',700,'L','Short Sleeve Shirt',5),(20,2.00,600.00,_binary '','Short Sleeve Shirt',300,'XL','Short Sleeve Shirt',5),(21,1.94,1552.00,_binary '','Full Sleeve Shirt',800,'S','Full Sleeve Shirt',6),(22,2.00,2000.00,_binary '','Full Sleeve Shirt',1000,'M','Full Sleeve Shirt',6),(23,2.05,1025.00,_binary '','Full Sleeve Shirt',500,'L','Full Sleeve Shirt',6),(24,2.10,1050.00,_binary '','Full Sleeve Shirt',500,'XL','Full Sleeve Shirt',6);
+/*!40000 ALTER TABLE `rmc_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-09 19:21:14
