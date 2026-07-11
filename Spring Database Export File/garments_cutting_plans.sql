@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.44
+-- Server version	8.0.45
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -46,7 +46,7 @@ CREATE TABLE `cutting_plans` (
   KEY `FKhpbk6xddhq6edwahnmwsbbmtl` (`order_id`),
   CONSTRAINT `FKhpbk6xddhq6edwahnmwsbbmtl` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   CONSTRAINT `FKm1c3x2lahtl70a240v127y4wv` FOREIGN KEY (`buyer_id`) REFERENCES `buyers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,7 +55,7 @@ CREATE TABLE `cutting_plans` (
 
 LOCK TABLES `cutting_plans` WRITE;
 /*!40000 ALTER TABLE `cutting_plans` DISABLE KEYS */;
-INSERT INTO `cutting_plans` VALUES (1,'Navy Blue','Rahim','CP-1782195733424','CT-01','2026-06-28','Cotton-Polyester Blend',85.50,120.50,60.00,80,2800,'2026-06-25','COMPLETED','NC205',5627.00,5,3);
+INSERT INTO `cutting_plans` VALUES (1,'Navy Blue','Rahim','CP-1782195733424','CT-01','2026-06-28','Cotton-Polyester Blend',85.50,120.50,60.00,80,2800,'2026-06-25','COMPLETED','NC205',5627.00,5,3),(2,'Blue','Rahim','CP-1783763215146','1,2,3','2026-07-16','Cooton',90.00,85.00,90.00,20,14500,'2026-07-11','PENDING','TO-207',27955.00,6,4);
 /*!40000 ALTER TABLE `cutting_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -68,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-11 13:42:26
+-- Dump completed on 2026-07-11 19:18:12
