@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `store_requisition_items`;
 CREATE TABLE `store_requisition_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `quantity` double DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
   `item_id` bigint DEFAULT NULL,
   `store_requisition_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -32,7 +33,7 @@ CREATE TABLE `store_requisition_items` (
   KEY `FK6wjadjscgdp7rg67uhu3k7t2e` (`store_requisition_id`),
   CONSTRAINT `FK6wjadjscgdp7rg67uhu3k7t2e` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
   CONSTRAINT `FK9q0nlvx3ualaki28xai84jvpd` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +42,7 @@ CREATE TABLE `store_requisition_items` (
 
 LOCK TABLES `store_requisition_items` WRITE;
 /*!40000 ALTER TABLE `store_requisition_items` DISABLE KEYS */;
-INSERT INTO `store_requisition_items` VALUES (1,10,1,1),(2,2000,2,1),(3,3000,4,1),(4,100,6,1),(5,100,1,2),(6,2000,4,2),(7,2000,7,2),(8,2000,2,3),(9,4000,7,3);
+INSERT INTO `store_requisition_items` VALUES (1,3000,NULL,1,1),(2,2000,NULL,2,1),(3,2000,NULL,3,1),(4,2000,NULL,4,1),(5,100,NULL,5,1);
 /*!40000 ALTER TABLE `store_requisition_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:14
+-- Dump completed on 2026-07-11 13:42:24

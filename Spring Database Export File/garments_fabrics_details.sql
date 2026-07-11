@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `fabrics_details` (
   PRIMARY KEY (`id`),
   KEY `FKal9b3pw0h6aeug1hrtdbv5kp4` (`rmc_id`),
   CONSTRAINT `FKal9b3pw0h6aeug1hrtdbv5kp4` FOREIGN KEY (`rmc_id`) REFERENCES `fabric-check` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `fabrics_details` (
 
 LOCK TABLES `fabrics_details` WRITE;
 /*!40000 ALTER TABLE `fabrics_details` DISABLE KEYS */;
-INSERT INTO `fabrics_details` VALUES (1,1.79,5370.00,_binary '','Short Sleeve Shirt',3000,'S','Short Sleeve Shirt',1),(2,1.84,5520.00,_binary '','Short Sleeve Shirt',3000,'M','Short Sleeve Shirt',1),(3,1.89,3780.00,_binary '','Short Sleeve Shirt',2000,'L','Short Sleeve Shirt',1),(4,2.00,4000.00,_binary '','Short Sleeve Shirt',2000,'XL','Short Sleeve Shirt',1),(5,1.94,970.00,_binary '','Full Sleeve Shirt',500,'S','Full Sleeve Shirt',1),(6,2.00,1000.00,_binary '','Full Sleeve Shirt',500,'M','Full Sleeve Shirt',1),(7,2.05,3075.00,_binary '','Full Sleeve Shirt',1500,'L','Full Sleeve Shirt',1),(8,2.12,4240.00,_binary '','Full Sleeve Shirt',2000,'XL','Full Sleeve Shirt',1);
+INSERT INTO `fabrics_details` VALUES (1,1.79,5370.00,_binary '','Short Sleeve Shirt',3000,'S','Short Sleeve Shirt',1),(2,1.84,5520.00,_binary '','Short Sleeve Shirt',3000,'M','Short Sleeve Shirt',1),(3,1.89,3780.00,_binary '','Short Sleeve Shirt',2000,'L','Short Sleeve Shirt',1),(4,2.00,4000.00,_binary '','Short Sleeve Shirt',2000,'XL','Short Sleeve Shirt',1),(5,1.94,970.00,_binary '','Full Sleeve Shirt',500,'S','Full Sleeve Shirt',1),(6,2.00,1000.00,_binary '','Full Sleeve Shirt',500,'M','Full Sleeve Shirt',1),(7,2.05,3075.00,_binary '','Full Sleeve Shirt',1500,'L','Full Sleeve Shirt',1),(8,2.12,4240.00,_binary '','Full Sleeve Shirt',2000,'XL','Full Sleeve Shirt',1),(9,1.94,1552.00,_binary '','Full Sleeve Shirt',800,'S','Full Sleeve Shirt',2),(10,2.00,2000.00,_binary '','Full Sleeve Shirt',1000,'M','Full Sleeve Shirt',2),(11,2.05,1025.00,_binary '','Full Sleeve Shirt',500,'L','Full Sleeve Shirt',2),(12,2.12,1060.00,_binary '','Full Sleeve Shirt',500,'XL','Full Sleeve Shirt',2);
 /*!40000 ALTER TABLE `fabrics_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-11 13:42:25

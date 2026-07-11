@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -45,7 +45,7 @@ CREATE TABLE `new_rmc_check` (
 
 LOCK TABLES `new_rmc_check` WRITE;
 /*!40000 ALTER TABLE `new_rmc_check` DISABLE KEYS */;
-INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 18:29:02.311268',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5);
+INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 22:01:21.665625',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5);
 /*!40000 ALTER TABLE `new_rmc_check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:16
+-- Dump completed on 2026-07-11 13:42:23

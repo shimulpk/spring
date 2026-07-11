@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -44,7 +44,7 @@ CREATE TABLE `fabric-check` (
 
 LOCK TABLES `fabric-check` WRITE;
 /*!40000 ALTER TABLE `fabric-check` DISABLE KEYS */;
-INSERT INTO `fabric-check` VALUES (1,'2026-07-08 17:53:57.042802','OR-2026-007','TO-PO-5050',27955.00,4,5);
+INSERT INTO `fabric-check` VALUES (1,'2026-07-07 11:25:33.543213','OR-2026-007','TO-PO-5050',27955.00,4,5),(2,'2026-07-11 13:02:52.536747','OR-2026-004','NC-PO-8850',5637.00,3,4);
 /*!40000 ALTER TABLE `fabric-check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:15
+-- Dump completed on 2026-07-11 13:42:24

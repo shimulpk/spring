@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,19 +25,19 @@ DROP TABLE IF EXISTS `purchase_orders`;
 CREATE TABLE `purchase_orders` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `grand_total` double NOT NULL,
-  `po_date` date DEFAULT NULL,
+  `po_date` date NOT NULL,
   `po_no` varchar(255) NOT NULL,
   `remarks` varchar(1000) DEFAULT NULL,
-  `status` enum('APPROVED','CANCELLED','DRAFT','RECEIVED','SENT','PENDING') DEFAULT NULL,
-  `store_requisition_id` bigint DEFAULT NULL,
-  `vendor_id` bigint DEFAULT NULL,
+  `status` enum('APPROVED','CANCELLED','PENDING','RECEIVED') NOT NULL,
+  `store_requisition_id` bigint NOT NULL,
+  `vendor_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKhocigcx4568i6hq7xymoco77w` (`po_no`),
   KEY `FKcg1mq22nertgui6gv32rq9x4` (`store_requisition_id`),
   KEY `FKn3rssy7613r6x49ax30e2nbay` (`vendor_id`),
   CONSTRAINT `FKcg1mq22nertgui6gv32rq9x4` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
   CONSTRAINT `FKn3rssy7613r6x49ax30e2nbay` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `purchase_orders` (
 
 LOCK TABLES `purchase_orders` WRITE;
 /*!40000 ALTER TABLE `purchase_orders` DISABLE KEYS */;
-INSERT INTO `purchase_orders` VALUES (1,28900,'2026-07-09','PO-0001','','PENDING',1,1),(2,29000,'2026-07-10','PO-0002',NULL,'PENDING',2,2),(3,248600,'2026-07-09','PO-0003','','PENDING',3,3);
+INSERT INTO `purchase_orders` VALUES (1,382500,'2026-07-09','PO-0001','Please Good Quality Ensure','RECEIVED',1,1);
 /*!40000 ALTER TABLE `purchase_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:14
+-- Dump completed on 2026-07-11 13:42:26

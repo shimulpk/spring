@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,18 +24,17 @@ DROP TABLE IF EXISTS `purchase_order_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `purchase_order_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `quantity` double DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
-  `unit_price` double DEFAULT NULL,
-  `item_id` bigint DEFAULT NULL,
-  `purchase_order_id` bigint DEFAULT NULL,
   `line_total` double NOT NULL,
+  `quantity` double NOT NULL,
+  `unit_price` double NOT NULL,
+  `item_id` bigint NOT NULL,
+  `purchase_order_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FKohkm3h7y9fnaj5h9g2wf5sblf` (`item_id`),
   KEY `FKo3yj8ocbw2kav38548t22hgh8` (`purchase_order_id`),
   CONSTRAINT `FKo3yj8ocbw2kav38548t22hgh8` FOREIGN KEY (`purchase_order_id`) REFERENCES `purchase_orders` (`id`),
   CONSTRAINT `FKohkm3h7y9fnaj5h9g2wf5sblf` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +43,7 @@ CREATE TABLE `purchase_order_items` (
 
 LOCK TABLES `purchase_order_items` WRITE;
 /*!40000 ALTER TABLE `purchase_order_items` DISABLE KEYS */;
-INSERT INTO `purchase_order_items` VALUES (1,10,NULL,120,1,1,1200),(2,2000,NULL,6,2,1,12000),(3,3000,NULL,5,4,1,15000),(4,100,NULL,7,6,1,700),(5,100,NULL,150,1,2,15000),(6,2000,NULL,2,4,2,4000),(7,2000,NULL,5,7,2,10000),(8,2000,NULL,120,2,3,240000),(9,4000,NULL,2.15,7,3,8600);
+INSERT INTO `purchase_order_items` VALUES (1,360000,3000,120,1,1),(2,4000,2000,2,2,1),(3,6500,2000,3.25,3,1),(4,8000,2000,4,4,1),(5,4000,100,40,5,1);
 /*!40000 ALTER TABLE `purchase_order_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:13
+-- Dump completed on 2026-07-11 13:42:25

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -41,7 +41,7 @@ CREATE TABLE `store_requisitions` (
 
 LOCK TABLES `store_requisitions` WRITE;
 /*!40000 ALTER TABLE `store_requisitions` DISABLE KEYS */;
-INSERT INTO `store_requisitions` VALUES (1,'Inventory','PR-1783591855406','Very Urzent','Store Keeper','2026-07-09','APPROVED'),(2,'Store','PR-1783597221686','needed','store','2026-07-17','APPROVED'),(3,'Store','PR-1783600678892','Urzent','Store Keeper','2026-07-10','APPROVED');
+INSERT INTO `store_requisitions` VALUES (1,'Inventory','PR-1783527105095','Urjent','Store Kepper','2026-07-08','APPROVED');
 /*!40000 ALTER TABLE `store_requisitions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:14
+-- Dump completed on 2026-07-11 13:42:26

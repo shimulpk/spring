@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,36 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `raw_material_checks`
+-- Table structure for table `material_issue_items`
 --
 
-DROP TABLE IF EXISTS `raw_material_checks`;
+DROP TABLE IF EXISTS `material_issue_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `raw_material_checks` (
+CREATE TABLE `material_issue_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `created_at` datetime(6) DEFAULT NULL,
-  `order_code` varchar(255) DEFAULT NULL,
-  `po_number` varchar(255) DEFAULT NULL,
-  `total_fabric_required` decimal(38,2) DEFAULT NULL,
-  `order_id` bigint DEFAULT NULL,
-  `style_id` bigint DEFAULT NULL,
+  `quantity` double DEFAULT NULL,
+  `item_id` bigint DEFAULT NULL,
+  `material_issue_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK5mj2byjw32vj5hgefr6qohy8d` (`order_id`),
-  KEY `FKebsdru4kwo36qpo9coquu5yg3` (`style_id`),
-  CONSTRAINT `FK5mj2byjw32vj5hgefr6qohy8d` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  CONSTRAINT `FKebsdru4kwo36qpo9coquu5yg3` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FKho8a3i4sscwdcxmavxcy0y0ml` (`item_id`),
+  KEY `FKlxfgtqv0ia2kf08d0rg4eno9p` (`material_issue_id`),
+  CONSTRAINT `FKho8a3i4sscwdcxmavxcy0y0ml` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`),
+  CONSTRAINT `FKlxfgtqv0ia2kf08d0rg4eno9p` FOREIGN KEY (`material_issue_id`) REFERENCES `material_issues` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `raw_material_checks`
+-- Dumping data for table `material_issue_items`
 --
 
-LOCK TABLES `raw_material_checks` WRITE;
-/*!40000 ALTER TABLE `raw_material_checks` DISABLE KEYS */;
-INSERT INTO `raw_material_checks` VALUES (4,'2026-06-18 21:13:44.716477','OR-2026-001','HM-PO-7788',4312.00,1,1),(5,'2026-06-18 21:15:34.217429','OR-2026-002','HM-PO-7740',4290.00,2,3),(6,'2026-06-18 21:15:45.507023','OR-2026-004','NC-PO-8850',5627.00,3,4);
-/*!40000 ALTER TABLE `raw_material_checks` ENABLE KEYS */;
+LOCK TABLES `material_issue_items` WRITE;
+/*!40000 ALTER TABLE `material_issue_items` DISABLE KEYS */;
+INSERT INTO `material_issue_items` VALUES (1,500,1,1),(2,500,2,1),(3,500,3,1),(4,500,4,1),(5,60,5,1);
+/*!40000 ALTER TABLE `material_issue_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:12
+-- Dump completed on 2026-07-11 13:42:22

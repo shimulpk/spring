@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `goods_receive_notes`;
 CREATE TABLE `goods_receive_notes` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `challan_no` varchar(255) DEFAULT NULL,
+  `grand_total` double DEFAULT NULL,
   `grn_date` date NOT NULL,
   `grn_no` varchar(255) NOT NULL,
   `invoice_no` varchar(255) DEFAULT NULL,
@@ -34,7 +35,7 @@ CREATE TABLE `goods_receive_notes` (
   UNIQUE KEY `UKl3jm6mfokf2b2bd34bxlmqgx3` (`grn_no`),
   KEY `FKcd58f57ju8qfov9oeeb2bygk7` (`purchase_order_id`),
   CONSTRAINT `FKcd58f57ju8qfov9oeeb2bygk7` FOREIGN KEY (`purchase_order_id`) REFERENCES `purchase_orders` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +44,7 @@ CREATE TABLE `goods_receive_notes` (
 
 LOCK TABLES `goods_receive_notes` WRITE;
 /*!40000 ALTER TABLE `goods_receive_notes` DISABLE KEYS */;
+INSERT INTO `goods_receive_notes` VALUES (1,'CH-001',382500,'2026-07-09','GRN-00001',NULL,'Received',1);
 /*!40000 ALTER TABLE `goods_receive_notes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-09 19:21:13
+-- Dump completed on 2026-07-11 13:42:25
