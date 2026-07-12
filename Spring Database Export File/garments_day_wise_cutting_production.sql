@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,7 +33,7 @@ CREATE TABLE `day_wise_cutting_production` (
   PRIMARY KEY (`id`),
   KEY `FKrtbunx97h4ck7i0wcnglj3e7s` (`cutting_plan_id`),
   CONSTRAINT `FKrtbunx97h4ck7i0wcnglj3e7s` FOREIGN KEY (`cutting_plan_id`) REFERENCES `cutting_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `day_wise_cutting_production` (
 
 LOCK TABLES `day_wise_cutting_production` WRITE;
 /*!40000 ALTER TABLE `day_wise_cutting_production` DISABLE KEYS */;
-INSERT INTO `day_wise_cutting_production` VALUES (1,1000,'Rahim','2026-06-24',20,'NC205',1),(2,1800,'Rahim','2026-06-24',20,'NC205',1);
+INSERT INTO `day_wise_cutting_production` VALUES (1,1000,'Rahim','2026-06-24',20,'NC205',1),(2,1800,'Rahim','2026-06-24',20,'NC205',1),(3,4000,'Rahim','2026-07-11',20,'TO-207',2),(4,4000,'Rahim','2026-07-12',20,'TO-207',2),(5,3500,'Rahim','2026-07-11',10,'TO-207',2),(6,3000,'Rahim','2026-07-11',10,'TO-207',2);
 /*!40000 ALTER TABLE `day_wise_cutting_production` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-11 19:18:11
+-- Dump completed on 2026-07-12 14:04:10
