@@ -39,7 +39,7 @@ CREATE TABLE `sewing_plans` (
   PRIMARY KEY (`id`),
   KEY `FKh8v9t6ywbmuwow2okp1xurn64` (`cutting_plan_id`),
   CONSTRAINT `FKh8v9t6ywbmuwow2okp1xurn64` FOREIGN KEY (`cutting_plan_id`) REFERENCES `cutting_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `sewing_plans` (
 
 LOCK TABLES `sewing_plans` WRITE;
 /*!40000 ALTER TABLE `sewing_plans` DISABLE KEYS */;
-INSERT INTO `sewing_plans` VALUES (2,'Norban Comtex Ltd','Navy Blue','2026-06-30',2800,'OR-2026-004',2800,65,'SP-1782410430915','2026-06-25','COMPLETED','NC205',1);
+INSERT INTO `sewing_plans` VALUES (2,'Norban Comtex Ltd','Navy Blue','2026-06-30',2800,'OR-2026-004',2800,65,'SP-1782410430915','2026-06-25','COMPLETED','NC205',1),(3,'Tiyani Outdoor Bd','Blue','2026-07-14',14500,'OR-2026-007',14500,80,'SP-1783942013797','2026-07-13','COMPLETED','TO-207',2);
 /*!40000 ALTER TABLE `sewing_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-12 14:04:10
+-- Dump completed on 2026-07-15  0:29:33
