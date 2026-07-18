@@ -36,7 +36,7 @@ CREATE TABLE `new_rmc_check` (
   KEY `FK2lbt1qowpsw7yrkdhaj385irh` (`style_id`),
   CONSTRAINT `FK2lbt1qowpsw7yrkdhaj385irh` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`),
   CONSTRAINT `FKd3e1p28yy51sks9hs6tdp2qvq` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `new_rmc_check` (
 
 LOCK TABLES `new_rmc_check` WRITE;
 /*!40000 ALTER TABLE `new_rmc_check` DISABLE KEYS */;
-INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 22:01:21.665625',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5);
+INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 22:01:21.665625',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5),(3,'H&M','2026-07-16 00:37:24.291150',619045,'Short Sleeve Shirt',2300,1,1);
 /*!40000 ALTER TABLE `new_rmc_check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-15  0:29:36
+-- Dump completed on 2026-07-18 13:39:53

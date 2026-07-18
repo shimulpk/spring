@@ -34,7 +34,7 @@ CREATE TABLE `new_rmc_details` (
   PRIMARY KEY (`id`),
   KEY `FK6g1etkcsl8xls0ncee5ub5hfx` (`rmc_check_id`),
   CONSTRAINT `FK6g1etkcsl8xls0ncee5ub5hfx` FOREIGN KEY (`rmc_check_id`) REFERENCES `new_rmc_check` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `new_rmc_details` (
 
 LOCK TABLES `new_rmc_details` WRITE;
 /*!40000 ALTER TABLE `new_rmc_details` DISABLE KEYS */;
-INSERT INTO `new_rmc_details` VALUES (1,'Cotton Fabric',1.88,3543800,27260,'Yard',130,1),(2,'Hang Tag',3,217500,43500,'Pieces',5,1),(3,'Care Label',2,232000,29000,'Pieces',8,1),(4,'Button',12,348000,174000,'Pieces',2,1),(5,'Interlining',0.45,228375,6525,'meter',35,1);
+INSERT INTO `new_rmc_details` VALUES (1,'Cotton Fabric',1.88,3543800,27260,'Yard',130,1),(2,'Hang Tag',3,217500,43500,'Pieces',5,1),(3,'Care Label',2,232000,29000,'Pieces',8,1),(4,'Button',12,348000,174000,'Pieces',2,1),(5,'Interlining',0.45,228375,6525,'meter',35,1),(11,'Cotton Fabric',1.88,518880,4324,'Yard',120,3),(12,'Care-Label',2,23000,4600,'Pieces',5,3),(13,'Hang Tag',2,32200,4600,'Piece',7,3),(14,'Button',8,24840,18400,'Pieces',1.35,3),(15,'Interlining',0.25,20125,575,'meter',35,3);
 /*!40000 ALTER TABLE `new_rmc_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-15  0:29:36
+-- Dump completed on 2026-07-18 13:39:55

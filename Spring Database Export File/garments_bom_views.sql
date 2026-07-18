@@ -35,7 +35,7 @@ CREATE TABLE `bom_views` (
   PRIMARY KEY (`id`),
   KEY `FKgujq80ku3uvlqtrwgr8pwcdb8` (`style_id`),
   CONSTRAINT `FKgujq80ku3uvlqtrwgr8pwcdb8` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `bom_views` (
 
 LOCK TABLES `bom_views` WRITE;
 /*!40000 ALTER TABLE `bom_views` DISABLE KEYS */;
-INSERT INTO `bom_views` VALUES (1,'Body','Cotton Fabric',1.88,1,225.60,'Yard',120.00,1),(2,'Body','Care-Label',2.00,2,10.00,'Pieces',5.00,1),(3,'10','Hang Tag',2.00,3,14.00,'Piece',7.00,1),(4,'','Button',8.00,4,10.80,'Pieces',1.35,1),(5,'','Interlining',0.25,5,8.75,'meter',35.00,1),(6,'','Cotton Fabric',1.88,1,244.40,'Yard',130.00,5),(7,'','Hang Tag',3.00,2,15.00,'Pieces',5.00,5),(8,'','Care Label',2.00,3,16.00,'Pieces',8.00,5),(9,'','Button',12.00,4,24.00,'Pieces',2.00,5),(10,'','Interlining',0.45,5,15.75,'meter',35.00,5);
+INSERT INTO `bom_views` VALUES (1,'Body','Cotton Fabric',1.88,1,225.60,'Yard',120.00,1),(2,'Body','Care-Label',2.00,2,10.00,'Pieces',5.00,1),(3,'10','Hang Tag',2.00,3,14.00,'Piece',7.00,1),(4,'','Button',8.00,4,10.80,'Pieces',1.35,1),(5,'','Interlining',0.25,5,8.75,'meter',35.00,1),(6,'','Cotton Fabric',1.88,1,244.40,'Yard',130.00,5),(7,'','Hang Tag',3.00,2,15.00,'Pieces',5.00,5),(8,'','Care Label',2.00,3,16.00,'Pieces',8.00,5),(9,'','Button',12.00,4,24.00,'Pieces',2.00,5),(10,'','Interlining',0.45,5,15.75,'meter',35.00,5),(11,'','Cotton fabric',1.90,1,247.00,'Yard',130.00,2),(12,'','Care Label',4.00,2,12.00,'Pieces',3.00,2),(13,'','Hang Tag',3.00,3,24.00,'Pieces',8.00,2),(14,'','Interlining',0.25,4,7.50,'meter',30.00,2),(15,'','Button',12.00,5,10.80,'Pieces',0.90,2);
 /*!40000 ALTER TABLE `bom_views` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-15  0:29:37
+-- Dump completed on 2026-07-18 13:39:54

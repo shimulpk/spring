@@ -34,7 +34,7 @@ CREATE TABLE `purchase_order_items` (
   KEY `FKo3yj8ocbw2kav38548t22hgh8` (`purchase_order_id`),
   CONSTRAINT `FKo3yj8ocbw2kav38548t22hgh8` FOREIGN KEY (`purchase_order_id`) REFERENCES `purchase_orders` (`id`),
   CONSTRAINT `FKohkm3h7y9fnaj5h9g2wf5sblf` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `purchase_order_items` (
 
 LOCK TABLES `purchase_order_items` WRITE;
 /*!40000 ALTER TABLE `purchase_order_items` DISABLE KEYS */;
-INSERT INTO `purchase_order_items` VALUES (1,360000,3000,120,1,1),(2,4000,2000,2,2,1),(3,6500,2000,3.25,3,1),(4,8000,2000,4,4,1),(5,4000,100,40,5,1);
+INSERT INTO `purchase_order_items` VALUES (1,360000,3000,120,1,1),(2,4000,2000,2,2,1),(3,6500,2000,3.25,3,1),(4,8000,2000,4,4,1),(5,4000,100,40,5,1),(6,14400,120,120,1,2),(7,1800,2000,0.9,2,2),(8,24000,3000,8,3,2),(9,72000,4000,18,6,2);
 /*!40000 ALTER TABLE `purchase_order_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-15  0:29:34
+-- Dump completed on 2026-07-18 13:39:55
