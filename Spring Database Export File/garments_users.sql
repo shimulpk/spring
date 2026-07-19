@@ -35,7 +35,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`),
   UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,_binary '','admin@gmail.com',NULL,'$2a$10$gFQVaStjeBKvwHaOHH6sbuZNyCithwt01aUVASoN40DxyibaSj1kW','01700000000','ADMIN',NULL,'System Administrator');
+INSERT INTO `users` VALUES (1,_binary '','admin@gmail.com',NULL,'$2a$10$sHsZGWivPcys2mY/6NKxn.xgHNbuT5VIo.J270VJimxkVN0zl6k6C','01700000000','ADMIN',NULL,'MD Emran Hossain'),(2,_binary '','shimulpk61100@gmail.com',NULL,'$2a$10$eduLQCOpEc9LD7wMyOzXVusC6/CO3URKwN0.w.mSEZXEsxdMlW2/6','01568186408','MERCHANDISER',NULL,'Md Shimul Pramanik'),(3,_binary '','store@gmail.com',NULL,'$2a$10$cnYCaKpPNtaEYT/CZqXYGuM.5e8xDE9y4WYUmTAMHJj.VmXZeIPdS','01576987865','STORE_MANAGER',NULL,'Badrul Amin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-18 13:39:54
+-- Dump completed on 2026-07-19 14:00:41
