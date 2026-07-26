@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `fabric-check` (
   KEY `FK2bels5hql9bo96vy45j4b210i` (`style_id`),
   CONSTRAINT `FK2bels5hql9bo96vy45j4b210i` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`),
   CONSTRAINT `FKojho76d2nh2ev9xfwgmtcaeg9` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `fabric-check` (
 
 LOCK TABLES `fabric-check` WRITE;
 /*!40000 ALTER TABLE `fabric-check` DISABLE KEYS */;
-INSERT INTO `fabric-check` VALUES (2,'2026-07-11 13:02:52.536747','OR-2026-004','NC-PO-8850',5637.00,3,4),(3,'2026-07-11 23:49:29.760918','OR-2026-002','HM-PO-7740',4290.00,2,3),(5,'2026-07-16 00:38:34.271363','OR-2026-001','HM-PO-7788',4312.00,1,1);
+INSERT INTO `fabric-check` VALUES (3,'2026-07-11 23:49:29.760918','OR-2026-002','HM-PO-7740',4290.00,2,3),(5,'2026-07-16 00:38:34.271363','OR-2026-001','HM-PO-7788',4312.00,1,1);
 /*!40000 ALTER TABLE `fabric-check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-21 18:59:18
+-- Dump completed on 2026-07-26 13:47:15

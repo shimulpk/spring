@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -49,7 +49,7 @@ CREATE TABLE `packing_plans` (
   KEY `FKmwnsw3896q4ifnx56tb4sj2nr` (`order_id`),
   CONSTRAINT `FKmwnsw3896q4ifnx56tb4sj2nr` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   CONSTRAINT `FKsxu2acmf0xa9n0peb5yjp04j7` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `packing_plans` (
 
 LOCK TABLES `packing_plans` WRITE;
 /*!40000 ALTER TABLE `packing_plans` DISABLE KEYS */;
-INSERT INTO `packing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30',_binary '',2800,'OR-2026-004','Solid Packing','PKG-1782538567321','Rahim',10,'16x12',40,'2026-06-28','READY_TO_SHIP','NC205',2800,2800,280,1,3);
+INSERT INTO `packing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30',_binary '',2800,'OR-2026-004','Solid Packing','PKG-1782538567321','Rahim',10,'16x12',40,'2026-06-28','READY_TO_SHIP','NC205',2800,2800,280,1,3),(2,'Tiyani Outdoor Bd','Blue','2026-07-29',_binary '',14500,'OR-2026-007','Solid Packing','PKG-1785043233842','Sumaiya Akter',50,'Printed',0,'2026-07-26','PENDING','TO-207',14500,0,290,2,4);
 /*!40000 ALTER TABLE `packing_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -71,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-21 18:59:20
+-- Dump completed on 2026-07-26 13:47:13

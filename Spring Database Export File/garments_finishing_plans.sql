@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garments
 -- ------------------------------------------------------
--- Server version	8.0.45
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -55,7 +55,7 @@ CREATE TABLE `finishing_plans` (
 
 LOCK TABLES `finishing_plans` WRITE;
 /*!40000 ALTER TABLE `finishing_plans` DISABLE KEYS */;
-INSERT INTO `finishing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30','FP-1782468312585','FT-01',2800,'OR-2026-004',2800,_binary '',_binary '',_binary '',_binary '',70,'2026-06-28','COMPLETED','NC205','Rahim',2800,2),(2,'Tiyani Outdoor Bd','Blue','2026-07-16','FP-1783942418800','FT-01',14500,'OR-2026-007',0,_binary '',_binary '',_binary '',_binary '',0,'2026-07-15','IN_PROGRESS','TO-207','Sumaiya Akter',14500,3);
+INSERT INTO `finishing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30','FP-1782468312585','FT-01',2800,'OR-2026-004',2800,_binary '',_binary '',_binary '',_binary '',70,'2026-06-28','COMPLETED','NC205','Rahim',2800,2),(2,'Tiyani Outdoor Bd','Blue','2026-07-20','FP-1783942418800','FT-01',14500,'OR-2026-007',14500,_binary '',_binary '',_binary '',_binary '',70,'2026-07-15','COMPLETED','TO-207','Sumaiya Akter',14500,3);
 /*!40000 ALTER TABLE `finishing_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -68,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-21 18:59:18
+-- Dump completed on 2026-07-26 13:47:13
