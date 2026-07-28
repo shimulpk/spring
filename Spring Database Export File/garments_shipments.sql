@@ -16,35 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `day_wise_finishing_productions`
+-- Table structure for table `shipments`
 --
 
-DROP TABLE IF EXISTS `day_wise_finishing_productions`;
+DROP TABLE IF EXISTS `shipments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `day_wise_finishing_productions` (
+CREATE TABLE `shipments` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `buyer_name` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `pass_qty` int DEFAULT NULL,
-  `reject_qty` int DEFAULT NULL,
-  `remarks` text,
+  `destination` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `remarks` varchar(1000) DEFAULT NULL,
+  `shipment_date` date NOT NULL,
+  `shipment_no` varchar(255) NOT NULL,
+  `shipment_qty` int DEFAULT NULL,
+  `status` enum('PENDING','SHIPPED') NOT NULL,
   `style_no` varchar(255) DEFAULT NULL,
-  `finishing_plan_id` bigint NOT NULL,
+  `packing_plan_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
-  CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `UKoc8x8dqwavgpohaeasad7u8gg` (`shipment_no`),
+  UNIQUE KEY `UK7pxj70qborele4m55buauf33m` (`packing_plan_id`),
+  CONSTRAINT `FKc6cyte7gg52mujrpxyft2ua18` FOREIGN KEY (`packing_plan_id`) REFERENCES `packing_plans` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `day_wise_finishing_productions`
+-- Dumping data for table `shipments`
 --
 
-LOCK TABLES `day_wise_finishing_productions` WRITE;
-/*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1),(3,'Tiyani Outdoor Bd','2026-07-16',5000,20,'','TO-207',2),(4,'Tiyani Outdoor Bd','2026-07-17',4000,20,'','TO-207',2),(5,'Tiyani Outdoor Bd','2026-07-18',3000,10,'','TO-207',2),(6,'Tiyani Outdoor Bd','2026-07-20',2500,20,'','TO-207',2);
-/*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
+LOCK TABLES `shipments` WRITE;
+/*!40000 ALTER TABLE `shipments` DISABLE KEYS */;
+INSERT INTO `shipments` VALUES (1,'Norban Comtex Ltd',', John Smith Street,Kingston Newyork','OR-2026-004','We ensured best Quality','2026-07-27','SHP-1785129887486',2800,'PENDING','NC205',1);
+/*!40000 ALTER TABLE `shipments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:06
+-- Dump completed on 2026-07-28 10:37:09
