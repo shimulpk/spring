@@ -33,7 +33,7 @@ CREATE TABLE `machines` (
   UNIQUE KEY `UK4sgxb9w2hibq8wvu2n19ftgdn` (`machine_id`),
   KEY `FK9rne3nrfwe2snay6gx98b8m4h` (`production_line_id`),
   CONSTRAINT `FK9rne3nrfwe2snay6gx98b8m4h` FOREIGN KEY (`production_line_id`) REFERENCES `production_lines` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `machines` (
 
 LOCK TABLES `machines` WRITE;
 /*!40000 ALTER TABLE `machines` DISABLE KEYS */;
-INSERT INTO `machines` VALUES (1,_binary '','MAC-CUT-001','Automatic Fabric Cutter','Cutting',1),(2,_binary '','MAC-CUT-002','Automatic Fabric Cutter','Cutting',1),(3,_binary '','MAC-CUT-003','Automatic Fabric Cutter','Cutting',1),(4,_binary '','MAC-CUT-004','Automatic Fabric Cutter','Cutting',1),(5,_binary '','MAC-CUT-005','OverLock Machine','Overlock',2),(6,_binary '','MAC-CUT-006','OverLock Machine','Overlock',2),(7,_binary '','MAC-CUT-007','OverLock Machine','Overlock',2),(8,_binary '','MAC-CUT-008','Button Attach Machine','Button Attach',3),(9,_binary '','MAC-CUT-009','Button Attach Machine','Button Attach',3),(10,_binary '','MAC-CUT-010','Button Attach Machine','Button Attach',3);
+INSERT INTO `machines` VALUES (1,_binary '','MAC-CUT-001','Automatic Fabric Cutter','Cutting',1),(2,_binary '','MAC-CUT-002','Automatic Fabric Cutter','Cutting',1),(3,_binary '','MAC-CUT-003','Automatic Fabric Cutter','Cutting',1),(4,_binary '','MAC-CUT-004','OverLock Machine','Overlock',2),(5,_binary '','MAC-CUT-005','OverLock Machine','Overlock',2),(6,_binary '','MAC-CUT-006','OverLock Machine','Overlock',2),(7,_binary '','MAC-CUT-007','Button Attach Machine','Button Attach',3),(8,_binary '','MAC-CUT-008','OverLock Machine','Button Attach',3),(9,_binary '','MAC-CUT-009','Button Attach Machine','Button Attach',3),(10,_binary '','MAC-CUT-010','Iron','Iron',4),(11,_binary '','MAC-CUT-011','Lock','Lock Stitch',5);
 /*!40000 ALTER TABLE `machines` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:08
+-- Dump completed on 2026-07-29 11:38:21

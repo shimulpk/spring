@@ -25,7 +25,6 @@ DROP TABLE IF EXISTS `store_requisition_items`;
 CREATE TABLE `store_requisition_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `quantity` double DEFAULT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
   `item_id` bigint DEFAULT NULL,
   `store_requisition_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -33,7 +32,7 @@ CREATE TABLE `store_requisition_items` (
   KEY `FK6wjadjscgdp7rg67uhu3k7t2e` (`store_requisition_id`),
   CONSTRAINT `FK6wjadjscgdp7rg67uhu3k7t2e` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
   CONSTRAINT `FK9q0nlvx3ualaki28xai84jvpd` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +41,7 @@ CREATE TABLE `store_requisition_items` (
 
 LOCK TABLES `store_requisition_items` WRITE;
 /*!40000 ALTER TABLE `store_requisition_items` DISABLE KEYS */;
-INSERT INTO `store_requisition_items` VALUES (1,3000,NULL,1,1),(2,2000,NULL,2,1),(3,2000,NULL,3,1),(4,2000,NULL,4,1),(5,100,NULL,5,1),(9,120,NULL,1,4),(10,2000,NULL,2,4),(11,3000,NULL,3,4),(12,4000,NULL,6,4),(13,2000,NULL,1,5),(14,2000,NULL,2,5),(15,4000,NULL,3,5),(16,50,NULL,6,5),(17,100,NULL,1,6),(18,2000,NULL,2,6),(19,1000,NULL,7,6),(20,100,NULL,5,6);
+INSERT INTO `store_requisition_items` VALUES (1,5000,1,1),(2,200000,2,1),(3,60000,3,1),(4,30000,4,1),(5,100,5,1),(6,100,6,1),(7,100,7,1),(8,5,8,1),(9,5,9,1),(10,20000,10,1),(11,2000,1,2),(12,20000,2,2),(13,60000,3,2),(14,50000,4,2),(15,50,5,2),(16,100,6,2),(17,100,7,2),(18,10,8,2),(19,2000,10,2),(20,2000,1,3),(21,30000,2,3),(22,50000,3,3),(23,40000,4,3),(24,60,5,3),(25,60,7,3),(26,2000,10,3),(27,100,9,3),(28,1000,1,4),(29,50,8,4),(30,100,6,4),(31,2000,10,4),(32,100,5,4),(33,2000,4,4),(34,20000,2,5),(35,10,8,5),(36,50,9,5),(37,2000,2,5),(38,2000,1,5),(39,60000,3,5);
 /*!40000 ALTER TABLE `store_requisition_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:10
+-- Dump completed on 2026-07-29 11:38:22

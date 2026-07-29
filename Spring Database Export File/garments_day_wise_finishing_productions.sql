@@ -34,7 +34,7 @@ CREATE TABLE `day_wise_finishing_productions` (
   PRIMARY KEY (`id`),
   KEY `FK3wj1u47quj9e474y08e3vh0e6` (`finishing_plan_id`),
   CONSTRAINT `FK3wj1u47quj9e474y08e3vh0e6` FOREIGN KEY (`finishing_plan_id`) REFERENCES `finishing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `day_wise_finishing_productions` (
 
 LOCK TABLES `day_wise_finishing_productions` WRITE;
 /*!40000 ALTER TABLE `day_wise_finishing_productions` DISABLE KEYS */;
-INSERT INTO `day_wise_finishing_productions` VALUES (1,'Norban Comtex Ltd','2026-06-28',2000,50,'Good Works','NC205',1),(2,'Norban Comtex Ltd','2026-06-28',800,20,'Production completed successfully','NC205',1),(3,'Tiyani Outdoor Bd','2026-07-16',5000,20,'','TO-207',2),(4,'Tiyani Outdoor Bd','2026-07-17',4000,20,'','TO-207',2),(5,'Tiyani Outdoor Bd','2026-07-18',3000,10,'','TO-207',2),(6,'Tiyani Outdoor Bd','2026-07-20',2500,20,'','TO-207',2);
+INSERT INTO `day_wise_finishing_productions` VALUES (1,'H&M','2026-07-21',4000,20,'','HM-201',1),(2,'H&M','2026-07-22',5000,30,'','HM-201',1),(3,'H&M','2026-07-23',6000,40,'','HM-201',1),(4,'H&M','2026-07-24',5000,30,'','HM-201',1),(5,'Zara (Inditex)','2026-07-25',5000,20,'','ZA-202',2),(6,'Zara (Inditex)','2026-07-26',6000,30,'','ZA-202',2),(7,'Zara (Inditex)','2026-07-27',4000,30,'','ZA-202',2),(8,'Primark','2026-07-28',4000,10,'','PRI-203',3),(9,'Primark','2026-07-29',3000,10,'','PRI-203',3);
 /*!40000 ALTER TABLE `day_wise_finishing_productions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:06
+-- Dump completed on 2026-07-29 11:38:22

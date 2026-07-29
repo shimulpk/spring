@@ -46,7 +46,7 @@ CREATE TABLE `finishing_plans` (
   PRIMARY KEY (`id`),
   KEY `FK1h8tg0u2asx914rtp5olxqplj` (`sewing_plan_id`),
   CONSTRAINT `FK1h8tg0u2asx914rtp5olxqplj` FOREIGN KEY (`sewing_plan_id`) REFERENCES `sewing_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,7 +55,7 @@ CREATE TABLE `finishing_plans` (
 
 LOCK TABLES `finishing_plans` WRITE;
 /*!40000 ALTER TABLE `finishing_plans` DISABLE KEYS */;
-INSERT INTO `finishing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30','FP-1782468312585','FT-01',2800,'OR-2026-004',2800,_binary '',_binary '',_binary '',_binary '',70,'2026-06-28','COMPLETED','NC205','Rahim',2800,2),(2,'Tiyani Outdoor Bd','Blue','2026-07-20','FP-1783942418800','FT-01',14500,'OR-2026-007',14500,_binary '',_binary '',_binary '',_binary '',70,'2026-07-15','COMPLETED','TO-207','Sumaiya Akter',14500,3);
+INSERT INTO `finishing_plans` VALUES (1,'H&M','Navy Blue','2026-07-24','FP-1785269648175','Table1,Table2,Table3',20000,'OR-301',20000,_binary '',_binary '',_binary '',_binary '',120,'2026-07-21','COMPLETED','HM-201','Anika Khatun',20000,1),(2,'Zara (Inditex)','Blue','2026-07-27','FP-1785299403326','Table1,Table2,Table3',15000,'OR-302',15000,_binary '',_binary '',_binary '',_binary '',80,'2026-07-24','COMPLETED','ZA-202','Anika Akter',15000,2),(3,'Primark','Navy Blue','2026-07-29','FP-1785300624996','Table1,Table2,Table3',17000,'	OR-303',7000,_binary '',_binary '',_binary '',_binary '',20,'2026-07-27','IN_PROGRESS','PRI-203','Anita Sarkar',17000,3);
 /*!40000 ALTER TABLE `finishing_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -68,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:07
+-- Dump completed on 2026-07-29 11:38:21

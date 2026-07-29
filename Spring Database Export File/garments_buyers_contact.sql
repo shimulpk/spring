@@ -32,7 +32,7 @@ CREATE TABLE `buyers_contact` (
   PRIMARY KEY (`id`),
   KEY `FK9fnw0unun6yygj2931uoom6m0` (`buyer_id`),
   CONSTRAINT `FK9fnw0unun6yygj2931uoom6m0` FOREIGN KEY (`buyer_id`) REFERENCES `buyers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `buyers_contact` (
 
 LOCK TABLES `buyers_contact` WRITE;
 /*!40000 ALTER TABLE `buyers_contact` DISABLE KEYS */;
-INSERT INTO `buyers_contact` VALUES (1,'Sajin','Merchandiser','sajin@hm.com','01711111111',1),(2,'Badrul Amin','QA Manager','b@hm.com','01822222222',1),(3,'Abul Hasan','Merchandiser','abul@zara.com','01933333333',2),(4,'Badrul Amin','Merchandiser','b@gmail.com','01933333336',3),(5,'Sajin Ahmed','Merchandiser','s@gmail.com','01933333387',4),(6,'Youkihiro Kajihara sun','Merchandiser','y@gmail.com','01733333343',5),(8,'Limon Hossen','Marchandiser','Limon@gmail.com','01765986723',6),(9,'Sumon Hossain','Marchandiser','sumon@gmail.com','01765342398',6),(10,'Ajgar Ali','Marchandiser','matsuka1@gmail.com','01568189034',7);
+INSERT INTO `buyers_contact` VALUES (1,'Emon Hossain','Merchandiser','emon@gmail.com','01568188790',1),(2,'Rehana Akter','Buying Manager','rehana@gmail.com','01568181234',2),(3,'Emon Hossain','Merchandiser','emon1@gmail.com','01568185678',2),(4,'Israt Jahan Jui','Merchandiser','jui@gmail.com','01568189009',3),(5,'Sumaiya Akter','Buying Manager','sumaiya@Gmail.com','01568182345',3),(6,'Abul Hasan','Country Representative','abul@gmail.com','01568186789',4),(7,'Rehana Parvin','Merchandiser','rehana2@gmail.com','01568173456',4),(9,'Sweety Akter','Country Representative','sweety@gmail.com','01568186754',5),(10,'Limon Hossain','Buying Manager','limon@gmail.com','01568180917',5),(11,'Ruhul Amin','Country Representative','ruhul@gmail.com','01568186745',8),(12,'Anik Hossain','Country Representative','anik@gmail.com','01568181209',9),(13,'Anika Khatun','Buying Manager','anika@gmail.com','01568188934',10),(14,'Atik Islam','Merchandiser','atik@gmail.com','01568182316',11),(15,'Mst Sumi Khatun','Country Representative','sumi@gmail.com','01568183423',12);
 /*!40000 ALTER TABLE `buyers_contact` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:07
+-- Dump completed on 2026-07-29 11:38:24

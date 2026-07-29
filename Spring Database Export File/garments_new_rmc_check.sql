@@ -36,7 +36,7 @@ CREATE TABLE `new_rmc_check` (
   KEY `FK2lbt1qowpsw7yrkdhaj385irh` (`style_id`),
   CONSTRAINT `FK2lbt1qowpsw7yrkdhaj385irh` FOREIGN KEY (`style_id`) REFERENCES `bom_styles` (`id`),
   CONSTRAINT `FKd3e1p28yy51sks9hs6tdp2qvq` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `new_rmc_check` (
 
 LOCK TABLES `new_rmc_check` WRITE;
 /*!40000 ALTER TABLE `new_rmc_check` DISABLE KEYS */;
-INSERT INTO `new_rmc_check` VALUES (1,'Tiyani Outdoor Bd','2026-07-08 22:01:21.665625',4569675,'Short Sleeve Shirt And Full Sleeve Shirt',14500,4,5),(3,'H&M','2026-07-16 00:37:24.291150',619045,'Short Sleeve Shirt',2300,1,1);
+INSERT INTO `new_rmc_check` VALUES (1,'H&M','2026-07-29 00:37:51.400182',6553800,'Short Sleeve Shirt',20000,1,1),(2,'Zara (Inditex)','2026-07-29 00:38:16.373046',5015250,'Full Sleeve Shirt',15000,2,2),(3,'Primark','2026-07-29 00:38:24.334455',5072800,'Short Sleeve Shirt',17000,3,3),(4,'Walmart','2026-07-29 00:39:10.454774',5941775,'Short Sleeve Shirt And Full Sleeve Shirt',17500,4,4),(5,'Uniqlo (Fast Retailing)','2026-07-29 00:39:57.740604',5780880,'Short Sleeve Shirt And Full Sleeve Shirt',18000,5,5),(6,'C&A','2026-07-29 11:13:41.695625',6114030,'Short Sleeve Shirt And Full Sleeve Shirt',19500,6,6);
 /*!40000 ALTER TABLE `new_rmc_check` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:21

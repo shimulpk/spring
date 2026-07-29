@@ -39,7 +39,7 @@ CREATE TABLE `vendors` (
 
 LOCK TABLES `vendors` WRITE;
 /*!40000 ALTER TABLE `vendors` DISABLE KEYS */;
-INSERT INTO `vendors` VALUES (1,_binary '','Savar, Bangladesh','Sarder Textile Mills Ltd','Hasan Ali','017111111178'),(2,_binary '','Valuka,Mymenshingh, Bangladesh','Salma Textile Mills Ltd','Sumaya Khatun','017111111167'),(3,_binary '','Ishwardi,Pabna, Bangladesh','Khan Textile Mills Ltd','Shofiq Khan','017111111167'),(4,_binary '','Savar,Dhaka','Faiza Button Ltd','Bappi','01567450978');
+INSERT INTO `vendors` VALUES (1,_binary '','Savar,Dhaka,Bangladesh','Sardar Treams Limited','Hasan Ali','01754346578'),(2,_binary '','Valuka, Mymenshingh','Salma Textile Limited','Sumaiya Akter','01786453213'),(3,_binary '','Konabari, Gazipur','Jibon And Brothers','Jibon','01786543423'),(4,_binary '','Hemayetpur, Savar','Sumi Cooton Mill','Sumi Khatun','01786453290');
 /*!40000 ALTER TABLE `vendors` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:24

@@ -33,7 +33,7 @@ CREATE TABLE `bom_styles` (
   `style_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKaa2n4bsvm7d3v35tb2vllk2wn` (`style_code`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `bom_styles` (
 
 LOCK TABLES `bom_styles` WRITE;
 /*!40000 ALTER TABLE `bom_styles` DISABLE KEYS */;
-INSERT INTO `bom_styles` VALUES (1,_binary '','Approved','Men\'s casual short sleeve shirt','S,M,L,XL','NK201','Short Sleeve Shirt','Casual'),(2,_binary '','Draft','Premium formal full sleeve shirt','M,L,XL,XXL','IZ203','Full Sleeve Shirt','Formal'),(3,_binary '','Approved','Men\'s casual Summer 2026','S,M,L,XL','VD204','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(4,_binary '','Approved','Men\'s casual Winter 2026','S,M,L,XL','NC205','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(5,_binary '','Approved','Men\'s casual Summer 2026','S,M,L,X,L','TO-207','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(6,_binary '','Approved','Summer 2026','S,M,L,XL','MK208','Short Sleeve Shirt And Full Sleeve Shirt',' Casual');
+INSERT INTO `bom_styles` VALUES (1,_binary '','Approved','Men\'s Casual Short Sleeve Shirt','S,M,L,XL','HM-201','Short Sleeve Shirt',' Casual'),(2,_binary '','Approved','Men\'s Formal Full Sleeve Shirt','S,M,L,XL','ZA-202','Full Sleeve Shirt','Formal'),(3,_binary '','Approved','Men\'s Casual Short Sleeve Shirt','S,M,L,XL','PRI-203','Short Sleeve Shirt',' Casual'),(4,_binary '','Approved','Men\'s Casual Short Sleeve Shirt And Full Sleeve Shirt','S,M,L,XL','WAL-204','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(5,_binary '','Approved','Men\'s Casual Short Sleeve Shirt And Full Sleeve Shirt','S,M,L,XL','UN-205','Short Sleeve Shirt And Full Sleeve Shirt',' Casual'),(6,_binary '','Approved','Men\'s Casual Short Sleeve Shirt And Full Sleeve Shirt','S,M,L,XL','CA-206','Short Sleeve Shirt And Full Sleeve Shirt','Formal'),(7,_binary '','Approved','Men\'s Casual Short Sleeve Shirt','S,M,L,XL','TES-207','Short Sleeve Shirt',' Casual'),(8,_binary '','Approved','Men\'s Formal Full Sleeve Shirt','S,M,L,XL','MS-208','Full Sleeve Shirt','Formal'),(9,_binary '','Approved','Men\'s Formal Full Sleeve Shirt','S,M,L,XL','GL-209','Full Sleeve Shirt','Formal'),(10,_binary '','Approved','Men\'s Casual Short Sleeve Shirt And Full Sleeve Shirt','S,M,L,XL','BS-10','Short Sleeve Shirt And Full Sleeve Shirt','Formal');
 /*!40000 ALTER TABLE `bom_styles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:06
+-- Dump completed on 2026-07-29 11:38:22

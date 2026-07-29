@@ -29,10 +29,10 @@ CREATE TABLE `store_requisitions` (
   `remarks` varchar(255) DEFAULT NULL,
   `requested_by` varchar(255) DEFAULT NULL,
   `requisition_date` date DEFAULT NULL,
-  `status` enum('APPROVED','PENDING','REJECTED') NOT NULL,
+  `status` enum('APPROVED','PENDING','PO_CREATED','REJECTED') NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKfl1n8gu7qyuftyscuseb63w6e` (`pr_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `store_requisitions` (
 
 LOCK TABLES `store_requisitions` WRITE;
 /*!40000 ALTER TABLE `store_requisitions` DISABLE KEYS */;
-INSERT INTO `store_requisitions` VALUES (1,'Inventory','PR-1783527105095','Urjent','Store Kepper','2026-07-08','APPROVED'),(4,'store','PR-1784140016325','urjent','store manager','2026-07-17','APPROVED'),(5,'Inventory','PR-1784179200423','Urjent','Store Keeper','2026-07-16','APPROVED'),(6,'Store','PR-1784179319445','Urjent','Store Keeper','2026-07-16','PENDING');
+INSERT INTO `store_requisitions` VALUES (1,'Inventory','PR-1785264752622','Urjent','Store Manager','2026-06-05','PO_CREATED'),(2,'Inventory','PR-1785264921887','very Urgent','Store Manager','2026-07-06','PO_CREATED'),(3,'Inventory','PR-1785265056308','Very Urgents','Store Manager','2026-07-08','PO_CREATED'),(4,'Inventory','PR-1785265149490','Urgents','Store Manager','2026-06-23','PENDING'),(5,'Inventory','PR-1785265240207','Urgents','Store Manager','2026-07-29','APPROVED');
 /*!40000 ALTER TABLE `store_requisitions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:22

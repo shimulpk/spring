@@ -35,7 +35,7 @@ CREATE TABLE `goods_receive_notes` (
   UNIQUE KEY `UKl3jm6mfokf2b2bd34bxlmqgx3` (`grn_no`),
   KEY `FKcd58f57ju8qfov9oeeb2bygk7` (`purchase_order_id`),
   CONSTRAINT `FKcd58f57ju8qfov9oeeb2bygk7` FOREIGN KEY (`purchase_order_id`) REFERENCES `purchase_orders` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `goods_receive_notes` (
 
 LOCK TABLES `goods_receive_notes` WRITE;
 /*!40000 ALTER TABLE `goods_receive_notes` DISABLE KEYS */;
-INSERT INTO `goods_receive_notes` VALUES (1,'CH-001',382500,'2026-07-09','GRN-00001',NULL,'Received',1);
+INSERT INTO `goods_receive_notes` VALUES (1,'CH-001',1992160,'2026-06-10','GRN-00001',NULL,'All Products Very good',1),(2,'CH-002',939960,'2026-06-29','GRN-00002',NULL,'Very Good Quality',2);
 /*!40000 ALTER TABLE `goods_receive_notes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:07
+-- Dump completed on 2026-07-29 11:38:23

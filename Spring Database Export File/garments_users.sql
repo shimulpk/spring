@@ -24,17 +24,15 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `active` bit(1) DEFAULT NULL,
+  `active` bit(1) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
-  `role` enum('ADMIN','MERCHANDISER','PRODUCTION_MANAGER','STORE_MANAGER','PURCHASE_MANAGER','CUTTING_MANAGER','SEWING_MANAGER','FINISHING_MANAGER','PACKING_MANAGER') DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `role` enum('ADMIN','CUTTING_MANAGER','FINISHING_MANAGER','MERCHANDISER','PACKING_MANAGER','PRODUCTION_MANAGER','PURCHASE_MANAGER','SEWING_MANAGER','STORE_MANAGER') DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`),
-  UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`)
+  UNIQUE KEY `UKdu5v5sr43g5bfnji4vb8hg5s3` (`phone`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -44,7 +42,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,_binary '','admin@gmail.com',NULL,'$2a$10$sHsZGWivPcys2mY/6NKxn.xgHNbuT5VIo.J270VJimxkVN0zl6k6C','01700000000','ADMIN',NULL,'MD Emran Hossain'),(2,_binary '','shimulpk61100@gmail.com',NULL,'$2a$10$eduLQCOpEc9LD7wMyOzXVusC6/CO3URKwN0.w.mSEZXEsxdMlW2/6','01568186408','MERCHANDISER',NULL,'Md Shimul Pramanik'),(3,_binary '','store@gmail.com',NULL,'$2a$10$cnYCaKpPNtaEYT/CZqXYGuM.5e8xDE9y4WYUmTAMHJj.VmXZeIPdS','01576987865','STORE_MANAGER',NULL,'Badrul Amin'),(4,_binary '','procurement@gmail.com',NULL,'$2a$10$U9PE/aR.LqnEj2ncpkxGLO85rMgnEy5wDRa1ZXCslD0W7IOq6cv9i','01568186456','PURCHASE_MANAGER',NULL,'Abul Hasan'),(5,_binary '','production@gmail.com',NULL,'$2a$10$icPCJNGKahmiIYVvn7KJLO5tIwHpeUgBHv0FwjZwqfeEgxDbhMVi6','01568186434','PRODUCTION_MANAGER',NULL,'Tanvir Hossain'),(6,_binary '','cutting@gmail.com',NULL,'$2a$10$DD4Uf5rwXE2CapVKdWfTF.AevLvo./P2wZInIT3tYWxmoetZsjwkq','01568186419','CUTTING_MANAGER',NULL,'Miskatul Islam'),(7,_binary '','sewing@gmail.com',NULL,'$2a$10$1ErdwByXNjDXtJgBxcEP3OxGn4sKUHZf.qWOihBJymmeSWHKf2xZ.','01568185643','SEWING_MANAGER',NULL,'Sajin Ahmed'),(8,_binary '','finishing@gmail.com',NULL,'$2a$10$.wIaXfEbmM.bpb.5hLrK7.mpHV/6Yw4S5SQ6paL5ywTTFgFZ5uY66','01568180956','FINISHING_MANAGER',NULL,'Shaharan Hossen'),(9,_binary '','packing@gmail.com',NULL,'$2a$10$I4YLPGjz1C9MbhynpJVmVe18mdcsv/7BxL7bTH12lsAqSvs97zzDK','01568182305','PACKING_MANAGER',NULL,'Masud Rana');
+INSERT INTO `users` VALUES (1,_binary '','admin@gmail.com','System Administrator','$2a$10$/NqPLpgusT4cad6oE/RUheONtrE568XrHx2DruhYagVopD9hpVZku','01700000000','ADMIN'),(2,_binary '','shimulpk61100@gmail.com','Md Shimul Pramanik','$2a$10$uFMEsYO12LVxuPiJ8EBQ1eoXz33iVZzYyhLtwdeYKalFyQVMvYCze','01568186408','MERCHANDISER'),(3,_binary '','store@gmail.com','Badrul Amin','$2a$10$U6yUxfnFaK8q3v46bJGcUut3Kbe3GNJaTlaaz0MGz51/y2laxu/3e','01709628913','STORE_MANAGER'),(4,_binary '','procurement@gmail.com','Abul Hasan','$2a$10$9i.t9L3jP80Lgk7ZgNQSW.FQ7JDT4YNwvn68vN.7vahpVhVnF0VMe','01726708595','PURCHASE_MANAGER'),(5,_binary '','production@gmail.com','Tanvir Hossain','$2a$10$mcs3MUOHo0ISVYoWU0APyuEepU/opX28gQWE4Ee/NxZr1HlyUAHEy','01736996938','PRODUCTION_MANAGER'),(6,_binary '','cutting@gmail.com','Miskatul Islam','$2a$10$cPfsrmh6k4FeGmdasyfP8e17P72s7w7HDumVNd1KiHcmlZ0/h9vZu','01568188976','CUTTING_MANAGER'),(7,_binary '','sewing@gmail.com','Sajin Ahmed','$2a$10$HUijfTHoo2AZwObBrTgjhepvhDAwJZTuthnQ2tvyZDZOuJt9sZY1K','01568187823','SEWING_MANAGER'),(8,_binary '','finishing@gmail.com','Shaharan Hossain','$2a$10$NxtlUBeK9i47k4lK6.Jms.ejbXOQgpirga3KyWm6TX/NQRvJlOOqa','01568186409','FINISHING_MANAGER'),(9,_binary '','packing@gmail.com','Masud Rana','$2a$10$/NR5YTuNetptsNL/qE2Dge20eAiGdd1BwAOWJEkXiSS/ZztTQgxuq','01568186407','PACKING_MANAGER');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:08
+-- Dump completed on 2026-07-29 11:38:24

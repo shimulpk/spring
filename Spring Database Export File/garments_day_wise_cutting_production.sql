@@ -33,7 +33,7 @@ CREATE TABLE `day_wise_cutting_production` (
   PRIMARY KEY (`id`),
   KEY `FKrtbunx97h4ck7i0wcnglj3e7s` (`cutting_plan_id`),
   CONSTRAINT `FKrtbunx97h4ck7i0wcnglj3e7s` FOREIGN KEY (`cutting_plan_id`) REFERENCES `cutting_plans` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `day_wise_cutting_production` (
 
 LOCK TABLES `day_wise_cutting_production` WRITE;
 /*!40000 ALTER TABLE `day_wise_cutting_production` DISABLE KEYS */;
-INSERT INTO `day_wise_cutting_production` VALUES (1,1000,'Rahim','2026-06-24',20,'NC205',1),(2,1800,'Rahim','2026-06-24',20,'NC205',1),(3,4000,'Rahim','2026-07-11',20,'TO-207',2),(4,4000,'Rahim','2026-07-12',20,'TO-207',2),(5,3500,'Rahim','2026-07-11',10,'TO-207',2),(6,3000,'Rahim','2026-07-11',10,'TO-207',2),(7,800,'Rahim','2026-07-23',10,'VD204',3),(8,700,'Rahim','2026-07-24',20,'VD204',3),(9,800,'Rahim','2026-07-25',10,'VD204',3);
+INSERT INTO `day_wise_cutting_production` VALUES (1,5000,'Rahim','2026-06-25',30,'HM-201',1),(2,6000,'Rahim','2026-06-26',30,'HM-201',1),(3,5000,'Rahim','2026-06-27',40,'HM-201',1),(4,4000,'Rahim','2026-06-28',20,'HM-201',1),(5,5000,'Rahim','2026-07-18',30,'ZA-202',2),(6,6000,'Rahim','2026-07-19',30,'ZA-202',2),(7,4000,'Rahim','2026-07-29',0,'ZA-202',2),(8,5000,'Rahim','2026-07-21',20,'PRI-203',3),(9,5000,'Rahim','2026-07-22',20,'PRI-203',3),(10,4000,'Rahim','2026-07-23',10,'PRI-203',3),(11,3000,'Rahim','2026-07-23',10,'PRI-203',3),(12,5000,'Rahim','2026-07-25',20,'WAL-204',4),(13,6000,'Rahim','2026-07-26',40,'WAL-204',4),(14,6500,'Rahim','2026-07-27',40,'WAL-204',4),(15,6000,'Rahim','2026-07-27',20,'UN-205',5),(16,7000,'Rahim','2026-07-28',30,'UN-205',5),(17,5000,'Rahim','2026-07-29',20,'UN-205',5);
 /*!40000 ALTER TABLE `day_wise_cutting_production` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:23

@@ -47,7 +47,7 @@ CREATE TABLE `shipments` (
 
 LOCK TABLES `shipments` WRITE;
 /*!40000 ALTER TABLE `shipments` DISABLE KEYS */;
-INSERT INTO `shipments` VALUES (1,'Norban Comtex Ltd',', John Smith Street,Kingston Newyork','OR-2026-004','We ensured best Quality','2026-07-27','SHP-1785129887486',2800,'PENDING','NC205',1);
+INSERT INTO `shipments` VALUES (1,'H&M','Mäster Samuelsgatan 46A, SE-106 38 Stockholm','OR-301','We Make Ensure Good Qualitity And Quantity','2026-07-29','SHP-1785270062742',20000,'SHIPPED','HM-201',1);
 /*!40000 ALTER TABLE `shipments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:23

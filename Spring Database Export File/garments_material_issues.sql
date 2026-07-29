@@ -32,7 +32,7 @@ CREATE TABLE `material_issues` (
   `status` enum('CANCELLED','ISSUED','PENDING') DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKnv1t87dfo6p29tfpen1xoeem2` (`issue_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `material_issues` (
 
 LOCK TABLES `material_issues` WRITE;
 /*!40000 ALTER TABLE `material_issues` DISABLE KEYS */;
-INSERT INTO `material_issues` VALUES (1,'Production','2026-07-10','MI-00001','Emergency needed','Production Manager','ISSUED');
+INSERT INTO `material_issues` VALUES (1,'Production ','2026-06-16','MI-00001','Urgent need','Production  Manager','ISSUED'),(2,'Production','2026-07-29','MI-00002','Urgent','Production Manager','ISSUED');
 /*!40000 ALTER TABLE `material_issues` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:08
+-- Dump completed on 2026-07-29 11:38:23

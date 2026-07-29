@@ -28,7 +28,7 @@ CREATE TABLE `purchase_orders` (
   `po_date` date NOT NULL,
   `po_no` varchar(255) NOT NULL,
   `remarks` varchar(1000) DEFAULT NULL,
-  `status` enum('APPROVED','CANCELLED','PENDING','RECEIVED') NOT NULL,
+  `status` enum('APPROVED','CANCELLED','PENDING','RECEIVED') DEFAULT NULL,
   `store_requisition_id` bigint NOT NULL,
   `vendor_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
@@ -37,7 +37,7 @@ CREATE TABLE `purchase_orders` (
   KEY `FKn3rssy7613r6x49ax30e2nbay` (`vendor_id`),
   CONSTRAINT `FKcg1mq22nertgui6gv32rq9x4` FOREIGN KEY (`store_requisition_id`) REFERENCES `store_requisitions` (`id`),
   CONSTRAINT `FKn3rssy7613r6x49ax30e2nbay` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `purchase_orders` (
 
 LOCK TABLES `purchase_orders` WRITE;
 /*!40000 ALTER TABLE `purchase_orders` DISABLE KEYS */;
-INSERT INTO `purchase_orders` VALUES (1,382500,'2026-07-09','PO-0001','Please Good Quality Ensure','RECEIVED',1,1),(2,112200,'2026-07-16','PO-0002','Please ensure quality','PENDING',4,3);
+INSERT INTO `purchase_orders` VALUES (1,1992160,'2026-07-28','PO-0001','Please Ensure Quality and Quantity','RECEIVED',1,1),(2,939960,'2026-06-10','PO-0002','please make suru quality and quantity','RECEIVED',2,2),(3,1010780,'2026-06-29','PO-0003','','PENDING',3,3);
 /*!40000 ALTER TABLE `purchase_orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:10
+-- Dump completed on 2026-07-29 11:38:21

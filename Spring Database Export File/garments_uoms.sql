@@ -42,7 +42,7 @@ CREATE TABLE `uoms` (
 
 LOCK TABLES `uoms` WRITE;
 /*!40000 ALTER TABLE `uoms` DISABLE KEYS */;
-INSERT INTO `uoms` VALUES (1,1.20,0.10,'Short Sleeve Shirt',3.00,'M',0.45,1.84,2.00),(2,1.15,0.10,'Short Sleeve Shirt',3.00,'S',0.45,1.79,2.00),(3,1.25,0.10,'Short Sleeve Shirt',3.00,'L',0.45,1.89,2.00),(4,1.35,0.10,'Short Sleeve Shirt',3.00,'XL',0.45,2.00,2.00),(5,1.30,0.10,'Full Sleeve Shirt',3.00,'S',0.45,1.94,2.00),(6,1.35,0.10,'Full Sleeve Shirt',3.00,'M',0.45,2.00,2.00),(7,1.40,0.10,'Full Sleeve Shirt',3.00,'L',0.45,2.05,2.00),(8,1.45,0.10,'Full Sleeve Shirt',4.00,'XL',0.45,2.12,2.00);
+INSERT INTO `uoms` VALUES (1,1.20,0.10,'Short Sleeve Shirt',3.00,'M',0.45,1.84,2.00),(2,1.15,0.10,'Short Sleeve Shirt',3.00,'S',0.45,1.79,2.00),(3,1.25,0.10,'Short Sleeve Shirt',3.00,'L',0.45,1.89,2.00),(4,1.35,0.10,'Short Sleeve Shirt',3.00,'XL',0.45,2.00,2.00),(5,1.30,0.10,'Full Sleeve Shirt',3.00,'S',0.45,1.94,2.00),(6,1.35,0.20,'Full Sleeve Shirt',3.00,'M',0.50,2.15,2.00),(7,1.40,0.20,'Full Sleeve Shirt',3.00,'L',0.50,2.21,2.00),(8,1.45,0.20,'Full Sleeve Shirt',3.00,'XL',0.50,2.26,2.00);
 /*!40000 ALTER TABLE `uoms` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:07
+-- Dump completed on 2026-07-29 11:38:22

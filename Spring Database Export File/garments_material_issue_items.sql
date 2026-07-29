@@ -32,7 +32,7 @@ CREATE TABLE `material_issue_items` (
   KEY `FKlxfgtqv0ia2kf08d0rg4eno9p` (`material_issue_id`),
   CONSTRAINT `FKho8a3i4sscwdcxmavxcy0y0ml` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`),
   CONSTRAINT `FKlxfgtqv0ia2kf08d0rg4eno9p` FOREIGN KEY (`material_issue_id`) REFERENCES `material_issues` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `material_issue_items` (
 
 LOCK TABLES `material_issue_items` WRITE;
 /*!40000 ALTER TABLE `material_issue_items` DISABLE KEYS */;
-INSERT INTO `material_issue_items` VALUES (1,500,1,1),(2,500,2,1),(3,500,3,1),(4,500,4,1),(5,60,5,1);
+INSERT INTO `material_issue_items` VALUES (1,2000,1,1),(2,20000,2,1),(3,1100,3,1),(4,3000,4,1),(5,50,5,1),(6,50,6,1),(7,20,7,1),(8,1,9,1),(9,500,10,1),(10,12,8,2);
 /*!40000 ALTER TABLE `material_issue_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:09
+-- Dump completed on 2026-07-29 11:38:24

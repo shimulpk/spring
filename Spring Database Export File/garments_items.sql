@@ -29,7 +29,7 @@ CREATE TABLE `items` (
   `item_name` varchar(255) NOT NULL,
   `unit` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
-INSERT INTO `items` VALUES (1,_binary '','Fabric','Cotton Fabric','Yard'),(2,_binary '','Accessories','Plastic Button','Piece'),(3,_binary '','Label','Hang Tag','Piece'),(4,_binary '','Label','Care Label','Piece'),(5,_binary '','Thread','Sewing Thread','Cone'),(6,_binary '','Accessories','Heat Seal','Box'),(7,_binary '','Packaging','Cross Tape','Piece');
+INSERT INTO `items` VALUES (1,_binary '','Fabric','Cotton Fabric','Yard'),(2,_binary '','Accessories','Plastic Button','Piece'),(3,_binary '','Label','Hang Tag','Piece'),(4,_binary '','Label','Care Label','Piece'),(5,_binary '','Thread','Sewing Thread','Cone'),(6,_binary '','Accessories','Heat Seal','Box'),(7,_binary '','Packaging','Cross Tape','Piece'),(8,_binary '','Others','Poli Bag','Kg'),(9,_binary '','Packaging','Cartoon','Box'),(10,_binary '','Accessories','Interlining','Meter');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:08
+-- Dump completed on 2026-07-29 11:38:25

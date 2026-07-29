@@ -58,7 +58,7 @@ CREATE TABLE `packing_plans` (
 
 LOCK TABLES `packing_plans` WRITE;
 /*!40000 ALTER TABLE `packing_plans` DISABLE KEYS */;
-INSERT INTO `packing_plans` VALUES (1,'Norban Comtex Ltd','Navy Blue','2026-06-30',_binary '',2800,'OR-2026-004','Solid Packing','PKG-1782538567321','Rahim',10,'16x12',40,'2026-06-28','READY_TO_SHIP','NC205',2800,2800,280,1,3),(2,'Tiyani Outdoor Bd','Blue','2026-07-29',_binary '',14500,'OR-2026-007','Solid Packing','PKG-1785043233842','Sumaiya Akter',50,'Printed',0,'2026-07-26','PENDING','TO-207',14500,0,290,2,4);
+INSERT INTO `packing_plans` VALUES (1,'H&M','Navy Blue','2026-07-28',_binary '',20000,'OR-301','Solid Packing','PKG-1785269869206','Rehana Akter',20,'Printed',150,'2026-07-25','READY_TO_SHIP','HM-201',20000,20000,1000,1,1),(2,'Zara (Inditex)','Blue','2026-08-01',_binary '',15000,'OR-302','Solid Packing','PKG-1785299561732','Emon Sarkar',20,'Printed',30,'2026-07-28','PENDING','ZA-202',15000,10000,750,2,2);
 /*!40000 ALTER TABLE `packing_plans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -71,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:06
+-- Dump completed on 2026-07-29 11:38:22

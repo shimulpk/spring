@@ -32,7 +32,7 @@ CREATE TABLE `sewing_targets` (
   KEY `FK4bv7opasu1a069b8arqrihsv2` (`sewing_plan_id`),
   CONSTRAINT `FK4bv7opasu1a069b8arqrihsv2` FOREIGN KEY (`sewing_plan_id`) REFERENCES `sewing_plans` (`id`),
   CONSTRAINT `FKs1xpva6e5e3t1793j1r0ethsa` FOREIGN KEY (`production_line_id`) REFERENCES `production_lines` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `sewing_targets` (
 
 LOCK TABLES `sewing_targets` WRITE;
 /*!40000 ALTER TABLE `sewing_targets` DISABLE KEYS */;
-INSERT INTO `sewing_targets` VALUES (1,1000,1,2),(2,1000,2,2),(3,800,3,2),(4,5000,1,3),(5,6000,2,3),(6,3500,3,3),(7,800,1,4),(8,700,2,4),(9,800,3,4);
+INSERT INTO `sewing_targets` VALUES (1,5000,1,1),(2,4000,2,1),(3,3000,3,1),(4,4000,4,1),(5,4000,5,1),(6,5000,1,2),(7,3000,2,2),(8,2000,3,2),(9,2500,4,2),(10,2500,5,2),(11,5000,1,3),(12,4000,2,3),(13,5000,3,3),(14,3000,4,3),(15,4000,1,4),(16,3000,2,4),(17,3000,3,4),(18,3000,4,4),(19,4500,5,4);
 /*!40000 ALTER TABLE `sewing_targets` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-28 10:37:06
+-- Dump completed on 2026-07-29 11:38:24
